@@ -1,0 +1,55 @@
+,,,,,
+,Full reference audit (revised bibliography),,,,
+,,,,,
+,Key,Cited as,Status,Where used,Verification evidence
+,Auton2015,"Auton et al. 2015, Nature 526:68-74",Verified,"Intro, framework, endowment bounds, theorem",1000 Genomes Project Phase 3 paper; real. Human SNV figures (4.1M avg/genome) consistent with the paper.
+,Ayala1995,"Ayala 1995, Science 270:1930-1936",Verified,Polymorphism objection (HLA/DQA),Real: 'The myth of Eve: molecular biology and human origins'. The classical HLA diversity objection.
+,BartonCharlesworth1984,"Barton & Charlesworth 1984, Annu Rev Ecol Syst 15:133-164",Verified,Existence proofs,Real review; founder-effect theory incl. single-fertilized-female cases.
+,Cann1987,"Cann, Stoneking & Wilson 1987, Nature 325:31-36",Verified,Uniparental clocks,Real: the mitochondrial Eve paper.
+,CrowKimura1970,Crow & Kimura 1970 (book),Verified,Coalescent background; establishment probability,Real: classic population-genetics textbook (Harper & Row).
+,ErikssonManica2012,"Eriksson & Manica 2012, PNAS 109",Verified,Limitations (structure-biased inference),"Real, doi:10.1073/pnas.1200567109 verified via PNAS."
+,Ewing2008,"Ewing et al. 2008, Mauritius kestrel",CORRECTED,Existence proofs,Real paper but WRONG journal/pages in the old bib ('Proc R Soc B 275:957-963'). Actual: Conservation Biology 22:395-404 (PubMed 18294297). Fixed.
+,Fenner2005,"Fenner 2005, Am J Phys Anthropol 128:415-423",Verified (new),Generation time (25 y),Real: 'Cross-cultural estimation of the human generation interval...' PubMed 15795887.
+,GarriganHammer2005,"Garrigan & Hammer 2006, NRG 7:669-680",Verified,Coalescence-depth ranges,Real review 'Reconstructing human origins in the genomic era'. (Bib key kept as GarriganHammer2005.)
+,GarriganHedrick2003,"Garrigan & Hedrick 2003, Evolution 57:1707-1712",Verified (new),MHC gene conversion / polymorphism,"Real (Wiley DOI 10.1111/j.0014-3820.2003.tb00580.x); MHC diversity/recombination up to two orders of magnitude above genomic average (corroborated by Minias et al. 2016, Heredity). Page range to confirm at proof stage."
+,Gauger2012,"Gauger, Axe & Luskin 2012 (book)",Verified,HLA objection; debate framing,"Real: 'Science and Human Origins', Discovery Institute Press (uploaded copy available)."
+,Green2008,"Green et al. 2008, Cell 134:416-426",Verified,Clock-free depth-ratio test,Real: first complete Neandertal mtDNA genome; 206 fixed differences from rCRS verified.
+,HillWeir1988,"Hill & Weir 1988, TPB 33:54-78",Verified,LD r^2 conventions,Real: variances/covariances of squared LD.
+,Hoelzel2024,"Hoelzel et al. 2024, Nat Ecol Evol 8:686-694",CORRECTED,Existence proofs (elephant seal),Real paper but WRONG title in old bib. Actual: 'Genomics of post-bottleneck recovery in the northern elephant seal' (doi:10.1038/s41559-024-02337-4). Fixed.
+,HossjerGauger2019,"Hossjer & Gauger 2019, BIO-Complexity 2019(1):1-20",Verified (new),Independent single-couple feasibility (~500 kya),"Real, peer-reviewed (doi:10.5048/BIO-C.2019.1); 'A Single-Couple Human Origin is Possible'."
+,Hu2023,"Hu et al. 2023, Science 381:979-984",Verified (new),"SFS-based severe bottleneck (~930-813 ka; ~1,280 breeders)","Real, verified (doi:10.1126/science.abq7487; PubMed 37651513)."
+,Hudson1990,"Hudson 1990, Oxford Surveys Evol Biol 7:1-44",Verified,Coalescent background,Real: the standard coalescent review.
+,Jackson2022,"Jackson et al. 2022, Conservation Biology 36:e13918",CORRECTED,Existence proofs,"Real paper but WRONG journal/title in old bib ('Molecular Ecology 31', '...conservation management'). Actual: Conservation Biology 36(4):e13918, doi:10.1111/cobi.13918; species = PINK PIGEON (not Mauritius kestrel). Bib, text and anchor table fixed."
+,Jonsson2017,"Jonsson et al. 2017, Nature 549:519-522",Verified,Mutation rate,"Real: Icelandic trios, per-generation mutation rate."
+,Kaeuffer2007,"Kaeuffer et al. 2007, Proc R Soc B 274:527-533",Verified,Existence proofs (mouflon),Real: 'Unexpected heterozygosity in an island mouflon population founded by a single pair of individuals'.
+,Karmin2016,"Karmin et al. 2016, Genome Research 26:459-466",Verified,Y-Adam estimates,Real: Y-chromosome bottleneck paper.
+,Kong2012,"Kong et al. 2012, Nature 488:471-475",Verified,Mutation rate (trio),Real: de novo mutation rate 1.20e-8.
+,LiDurbin2011,"Li & Durbin 2011, Nature 475:493-496",Verified,PSMC; resolution limits; depth ranges,Real: the PSMC paper.
+,McMullan2018,"McMullan et al. 2018, Nat Ecol Evol 2:1000-1008",Verified,Existence proofs (ash dieback),Real: 'The ash dieback invasion of Europe was founded by two genetically divergent individuals'.
+,Mendez2013,"Mendez et al. 2013, AJHG 92:454-459",Verified,"Y-Adam estimates (A00, 338 kya)",Real: A00 root paper.
+,Mendez2016,"Mendez et al. 2016, AJHG 98:728-734",CORRECTED,Clock-free Y test; replacement mechanism,"Real paper but WRONG volume in old bib ('AJHG 99'). Actual: AJHG 98(4):728-734, doi:10.1016/j.ajhg.2016.02.023. SUBSTANTIVE FIX: the Neandertal-modern Y divergence ratio is 2.1 (CI 1.7-2.9; TMRCA 588 vs 275 kya), not '2.5-3x' as the old draft stated. Scoping tests and appendix updated."
+,Nei1975,"Nei, Maruyama & Chakraborty 1975, Evolution 29:1-10",Verified,Bottleneck theory; level objection,Real: the classic bottleneck-effect paper.
+,Posth2017,"Posth et al. 2017, Nat Commun 8:16046",Verified (new),Archaic mtDNA replacement mechanism,"Real, verified (nature.com/articles/ncomms16046): deeply divergent Hohlenstein-Stadel mtDNA; African gene flow INTO Neanderthals."
+,Poznik2013,"Poznik et al. 2013, Science 341:562-565",Verified,Y-Adam estimates (120-156 kya),Real.
+,PradoMartinez2013,"Prado-Martinez et al. 2013, Nature 499:471-475",CORRECTED (minor),Endowment bounds (chimp 5.7M SNVs),"Real; old bib title 'Great ape genetic diversity and evolutionary history' corrected to '...and population history'. SNV figures (human 3.1M, chimp 5.7M) match the commonly cited values."
+,Pruefer2014,"Prufer et al. 2014, Nature 505:43-49",Verified,Archaic split 550-765 kya; low archaic diversity,"Real; split estimate 550,000-765,000 years verified against the paper text."
+,Rogers2020,"Rogers, Harris & Achenbach 2020, Science Advances 6:eaay5483",Verified (new),Neandersovan split ~737 ka; ancestor bottleneck Ne~500,"Real, verified (PMC7032934); used with its direct-scale rate (0.38e-9/site/yr)."
+,Sankararaman2012,"Sankararaman et al. 2012, PLoS Genet 8:e1002947",Verified,Introgression date 47-65 kya,Real.
+,Sankararaman2014,"Sankararaman et al. 2014, Nature 507:354-357",Verified,Introgressed fraction,Real.
+,Scally2012,"Scally & Durbin 2012, NRG 13:745-753",Verified,Mutation-rate discrepancy; s~2 correction; generation time,Real: 'Revising the human mutation rate'.
+,Scerri2019,"Scerri, Chikhi & Thomas 2019, NEE 3:1370-1372",Verified,African structure,Real comment piece.
+,SchiffelsDurbin2014,"Schiffels & Durbin 2014, Nat Genet 46:919-925",Verified,MSMC; Ne reconstructions,Real.
+,SlatkinExcoffier2012,"Slatkin & Excoffier 2012, Genetics 191:171-181",Verified,Sampled-couple 3/4 coefficient,Real: serial founder effects; the (1-1/2N) retention algebra gives 3/4 at N=2.
+,Swamidass2019,"Swamidass 2019 (book, IVP Academic)",CORRECTED (form),TMR4A concept; genealogical ancestry,"Old bib cited a 'Peaceful Science (preprint and peer-reviewed discussion series)' item. Replaced with the actual book: 'The Genealogical Adam and Eve: The Surprising Science of Universal Ancestry', IVP Academic, 2019."
+,Swamidass2022,Swamidass 2022 (conference paper),Verified (new),TMR4A estimate 495 +/- 100 kya,"'The misunderstood science of genetic bottlenecks', 2022 Annual Meeting / Peaceful Science print; states median TMR4A ~ 500,000 years (its Fig. 3). Non-journal venue - explicitly attributed; flagged for proof stage."
+,Szucs2017,"Szucs et al. 2017, Ecology Letters 20:436-444",CORRECTED,Existence proofs (experimental bottlenecks),Real paper but FABRICATED TITLE in old bib ('Severe bottlenecks reduce genetic variation and impede fitness...'). Actual title: 'Genetic and demographic founder effects have long-term fitness consequences for colonising populations' (doi:10.1111/ele.12743). Fixed.
+,Tajima1989,"Tajima 1989, Genetics 123:585-595",Verified,Tajima's D,Real: the classic paper.
+,Takahata1990,"Takahata 1990, PNAS 87:2419-2423",CORRECTED,Overdominance scaling; establishment probability,"Real paper but WRONG journal+title in old bib ('Genetics 124:753-767', '...and their transient behavior'). Actual: PNAS 87(7):2419-2423, 'A simple genealogical structure of strongly balanced allelic lines and trans-species evolution of polymorphism' (PMC53700). Fixed."
+,Tenesa2007,"Tenesa et al. 2007, AJHG 80:495-505",Verified (new),Observed short-range LD (1-kb bins),Real: 'Recent human effective population size estimated from linkage disequilibrium'; r^2 in 1-kb bins. Replaces the old draft's self-citation for the observed LD target.
+,Tennessen2012,"Tennessen et al. 2012, Science 337:64-74",Verified (new),"Observed Tajima's D (EA -2.12, AA -2.10)","Real, verified; replaces the old draft's uncited 'observed D' ranges."
+,Vigilant1991,"Vigilant et al. 1991, Science 253:1503-1507",Verified,mtDNA-Eve CI (129-298 kya),Real.
+,vonSalome2007,"von Salome, Gyllensten & Bergstrom 2007, Immunogenetics 59:261-271",CORRECTED,HLA-DRB1 allele counts,"Real paper but WRONG journal+pages+authors in old bib ('Tissue Antigens 69:383-397', two authors). Actual: Immunogenetics 59:261-271, title 'Full-length sequence analysis of the HLA-DRB1 locus suggests a recent origin of alleles'. End page to confirm at proof stage."
+,vonSeth2022,"von Seth et al. 2022, BMC Genomics 23:747",Verified,Existence proofs (black robin),"Real, verified (PubMed 36357860): 'Genomic trajectories of a near-extinction event in the Chatham Island black robin'. Old bib lacked the article number (747)."
+,Watterson1975,"Watterson 1975, TPB 7:256-276",Verified,Watterson's theta,Real: the classic segregating-sites paper.
+,Wright1931,"Wright 1931, Genetics 16:97-159",Verified,Wright-Fisher process,Real: the classic paper.
+,Xue2018,"Xue et al. 2018, Biological Invasions 20:3297-3314",Verified,Existence proofs (rapa whelk),"Real, verified (Johns Hopkins pure record)."

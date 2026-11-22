@@ -1,0 +1,23 @@
+,,,
+,Citation Audit - Summary,,
+,,,
+,Audit item,Value,Notes
+,Manuscript audited,Sole Genetic Progenitors: The Endowed-Pair Model of Single-Couple Human Origin (revised version),All six parts + appendix bibliography checked line by line
+,Method,"Every reference verified against publisher records (PubMed/PMC, publisher DOI pages, journal sites)",Web-verified 20 Nov 2026 session
+,References in revised bibliography,52,"natbib author-year, single thebibliography block"
+,Verified unchanged,33,"see 'Audit' sheet, status 'Verified'"
+,Corrected entries,8,"see 'Corrections' sheet: 2 wrong journals, 2 wrong/fabricated titles, 1 wrong volume, 1 wrong journal+authors, 1 wrong form (preprint -> book), 1 minor title fix"
+,Removed citations,6,"see 'Removed' sheet: 2 self-citations (Rahman 2026a/b) + 4 non-academic sources (Buggs blog/slides, Craig video script, Venema blog)"
+,Added references,10,see 'Added' sheet: all peer-reviewed or explicitly attributed non-journal sources
+,Fabricated citations found,2 (bibliographic details only),Szucs et al. 2017 title was fabricated; Ewing et al. 2008 journal was wrong. Both fixed. No reference pointed to a non-existent paper.
+,Substantive numeric fix,"Neandertal-modern Y divergence ratio: 2.1 (CI 1.7-2.9), was stated as 2.5-3x",Clock-free test conclusion unchanged (ratio >> 1)
+,Buggs citations remaining,0,All slides/blog citations removed; ideas re-anchored to primary literature or re-derived as the paper's own results
+,Self-citations remaining,0,Paper is fully self-contained and separate from Rahman 2026a/b
+,Verdict,PASS (with proof-stage flags),33 verified + 8 corrected + 9 added = 50 audited entries (+1 minor title fix counted in corrected); 51 entries in the revised bibliography. See the flags below.
+,,,
+,Proof-stage flags,,
+,"1. Archaic heterozygosity values: the manuscript compares archaic-branch diversity to the observed archaic genomes qualitatively ('several-fold below present-day human levels', citing Meyer et al. 2012 and Prufer et al. 2014). Confirm the exact per-site heterozygosity values against both papers at proof stage before quoting numbers.",,
+,"2. Swamidass 2022 venue is a conference/community print, not a journal. The TMR4A figure (495 +/- 100 kya) also appears in the author's 2020 Peaceful Science article ('What became of the genetic challenge to Adam and Eve?'). Both are explicitly attributed; if a journal version of the bottleneck paper exists, cite it at proof stage.",,
+,"3. Page ranges to confirm at proof stage: Garrigan & Hedrick 2003 (1707-1712), Tenesa et al. 2007 (495-505), von Salome et al. 2007 (end page 271).",,
+,"4. Substantive numeric fix: the Neandertal-modern Y divergence ratio is 2.1 (CI 1.7-2.9; 588 vs 275 kya, Mendez et al. 2016), not the '2.5-3x' the old draft stated; the clock-free test conclusion (ratio >> 1) is unchanged.",,
+,"5. Verdict: 52 references in the revised bibliography; 33 verified unchanged, 8 corrected (of which 2 had wrong journals, 2 had wrong/fabricated titles, 1 wrong volume), 6 removed, 10 added (Meyer et al. 2012 added in the post-review revision after the integrity check found it cited but missing). No fabricated citations remain in the revised bibliography.",,
