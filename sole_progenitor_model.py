@@ -514,7 +514,7 @@ def section_h():
             hap = hap / hap.sum(axis=1, keepdims=True)
         # plateau: exact WF drift via time-dilation. m=333 rescaled generations
         # at 2N'=1000 reproduce the drift of ~20,000 generations at 2N=60,000
-        # (equal cumulative hazard tau = m/(2N'); recombination is applied per
+        # (equal cumulative hazard tau = m/(2N')); recombination is applied per
         # rescaled generation at the dilated rate (1-c)^(T0/m).
         twon_eff = 1000.0
         m_resc = max(int(round(T0 / (2.0 * ne) * twon_eff)), 1)
