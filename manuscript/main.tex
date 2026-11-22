@@ -1,0 +1,138 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage[round,authoryear]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+
+\captionsetup{font=small,labelfont=bf}
+\setlength{\bibsep}{4pt}
+\onehalfspacing
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Ne}{N_{\mathrm{e}}}
+\newcommand{\Nepre}{N_{\mathrm{e}}^{\mathrm{pre}}}
+\newcommand{\T}[1]{T_{#1}}
+
+\title{\bfseries Sole Genetic Progenitors: The Endowed-Pair Model\\
+of Single-Couple Human Origin\\[6pt]
+\large A feasibility theorem for an $N=2$ founding couple without a
+pre-bottleneck population}
+
+\author{Atikur Rahman\\
+\small Independent Researcher, Dhaka-1206, Bangladesh}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent The strongest version of the single-couple human origin (SHCO)
+hypothesis claims that a founding couple of $N=2$ individuals can be the
+\emph{sole genetic progenitors} of a human population: the source of all of
+its heritable variation, requiring no pre-existing gene pool. The standard
+diversity objection to this claim --- that two individuals cannot carry the
+variation of a species --- assumes that the couple's genomes are a random
+sample of an external reservoir. This paper removes the assumption. We
+introduce the \emph{endowed-pair
+(EP) model}, in which the couple's genomes enter as an initial condition:
+their four gene copies per locus carry a divergence (endowment) $h$ bounded
+not by ancestry but by the heterozygosity of natural primate genomes
+($3.1$--$4.1$ million SNVs in humans, $5.7$ million in chimpanzees;
+\citealp{PradoMartinez2013,Auton2015}). The EP master equation,
+$E[T_2] = D_{<c} + e^{-\Lambda_c}\bigl[T_0 + \tfrac34 h/(2\mu)\bigr]$,
+replaces the sampled model's pre-population term with the endowment's
+$\tfrac34$-weighted coalescent-equivalent depth ($1.23$ Myr at the
+canonical endowment).
+A generation bound prices what the endowment must do: mutation accumulated
+below $T_0$ can add at most $2\mu T_0 = 0.53\times10^{-3}$ per site ($53\%$
+of the observed diversity, $1.6$ million SNVs per founder), so every
+trajectory of the class requires $h \ge \tfrac43(\pi_{\mathrm{obs}} - 2\mu T_0)
+= 0.63\times10^{-3}$ ($1.9$ million SNVs per founder) --- the couple must
+\emph{transmit} standing divergence, and the theorem quantifies how much.
+At the canonical point ($T_0 = 550$ kya, growth factor $1.6$, plateau
+$\Ne^{\max} = 3\times10^4$, $h = 1.576\times10^{-3}$) the model reproduces
+observed nucleotide diversity to $0.01\%$ ($\pi = 1.000\times10^{-3}$),
+satisfies the autosomal coalescence-depth range, yields Tajima's $D =
+-0.93$ (observed $D$ of order $-2$ in large-sample series), and reproduces
+the observed short-range linkage-disequilibrium profile ($E[r^2] \approx
+0.30$ at 1 kb, within the observed $0.3$--$0.5$ band). Under sole
+progenitorship the four-lineage compression time TMR4A equals $T_0$
+identically --- matching the direct-clock estimate $495 \pm 100$ kya of
+\citet{Swamidass2019,Swamidass2022} --- so the diversity-feasibility
+window and the independent TMR4A window coincide: $T_0 \in [400, 595]$ kya,
+the regime in which independent backward simulation also finds a
+single-couple origin compatible with the data \citep{HossjerGauger2019}.
+The uniparental MRCAs are the couple themselves (their published date
+estimates being anchored-clock estimates that require the ancestral-rate
+correction $s \approx 2$ of \citealp{Scally2012} --- a conditional,
+corroborative layer, the window itself resting on autosomal evidence
+alone); the bottleneck is
+invisible to PSMC/MSMC-type reconstruction; and balanced-locus retention
+($2.1$--$2.5$ of 4 founder lineages) and regeneration ($8{,}705$ candidate
+HLA-scale lineages in 550 kyr) answer the allelic-supply half of the
+polymorphism objection, the deep-root lineage count being its stated
+open per-locus test. Archaic
+admixture is handled by the \emph{descendant-clade extension}: the
+Neanderthal and Denisovan lineages branch from the couple's descendants, so
+the introgressed $2$--$6\%$ of non-African genomes is couple-descended DNA
+returning through the archaic relatives --- full nuclear coverage holds at
+$T_0 \in [550, 595]$ kya, and the model predicts the archaic branches' low
+heterozygosity (an order of magnitude below the modern branch), their deep
+cross-coalescence with moderns at $T_0$, and their extreme internal
+bottlenecks, all as observed; the archaic clades' uniparental compartments
+are the one scoped exception, falsified clock-free as couple-descended and
+assignable only to replacement from outside the couple's descent
+\citep{Mendez2016,Posth2017} --- so sole progenitorship is a claim about
+modern genomes, not about the archaic clades' uniparental compartments.
+The provenance of the endowment is the theorem's stated boundary: a couple
+carrying $h = 1.576\times10^{-3}$ --- the coalescent-equivalent of a
+population of $\Ne \approx 3.3\times10^{4}$ --- may be sampled from such a
+population, constituted de novo, or assembled from diverged ancestral
+lineages; all three readings generate identical descendant genetics, and
+no diversity measurement distinguishes them. All quantities are emitted by
+a single fixed-seed reproducibility script; every rate the model reads is
+pedigree-measured, every correction it applies is a published
+reconciliation, and its one free parameter is bounded by genomes that
+exist. The falsification conditions are stated in advance and are,
+without exception, measurable quantities. The diversity and structure of
+the human genome do not falsify a sole-progenitor couple at
+$T_0 \approx 550$ kya; what the theorem establishes is underdetermination
+under exact bounds --- the diversity objection fails as stated, the
+endowment's provenance is beyond the reach of any diversity measurement,
+and restoring the objection now requires a conjunction of assumptions ---
+a mandatory pre-population, a persistently order-of-magnitude-lower
+plateau, the refusal of the published ancestral-rate correction --- that
+no diversity measurement can test. The claim long dismissed as
+genetically impossible is, on every measurable quantity, the position the
+data leave standing.
+\end{abstract}
+
+\vspace{4pt}
+\noindent\textbf{Keywords:} population genetics; coalescent theory;
+single-couple origin; sole genetic progenitor; genomic endowment;
+bottleneck; nucleotide diversity; site frequency spectrum; TMR4A;
+linkage disequilibrium; balanced polymorphism; descendant clades;
+archaic admixture
+
+\vspace{8pt}
+
+\input{part1}
+\input{part2}
+\input{part3}
+\input{part4}
+\input{part5}
+\input{part6}
+
+\end{document}
