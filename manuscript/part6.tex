@@ -1,0 +1,194 @@
+\appendix
+
+\section{Crosswalk: the two model classes}\label{app:crosswalk}
+Table~\ref{tab:crosswalk} places the sampled-couple and endowed-pair
+classes side by side --- the formal expression of the ``two roads''
+framing that motivates the paper. The equations share a single structure
+(a depth term imported either externally or internally), which is why the
+two classes generate the same observables and why the diversity data
+cannot choose between them.
+
+\begin{table}[h]
+\centering\small
+\caption{The two model classes of single-couple human origin.}
+\label{tab:crosswalk}
+\begin{tabular}{p{3.4cm}p{5.4cm}p{5.4cm}}
+\toprule
+& Sampled couple (Sec.~\ref{sec:classes}) & Endowed pair (this paper) \\
+\midrule
+Couple's genomes &
+Random sample of 4 gene copies from $\Nepre$ &
+Initial condition; divergence $h$ bounded by primate heterozygosity \\
+Pre-bottleneck population &
+Mandatory ($\Nepre \gtrsim 2$--$3\times10^4$) &
+Absent (sole progenitorship) \\
+Depth import &
+$\tfrac34\,(2\Nepre)$ from pre-population &
+$\tfrac34\,h/(2\mu)$ from the couple's own divergence \\
+Master equation &
+Eq.~\eqref{eq:sampled} &
+Eq.~\eqref{eq:master} \\
+Role of the couple &
+Carrier (bottleneck transmitter) &
+Source (progenitor) \\
+Feasible $T_0$ &
+200--750 kya (with $\Nepre$ doing the work) &
+$[400, 595]$ kya (joint window, Eq.~\eqref{eq:window}) \\
+What is proved &
+Bottleneck-survival theorem &
+Sole-progenitor feasibility theorem (Thm.~\ref{thm:main}) \\
+Metaphysical layer &
+Couple drawn from a population &
+Couple constituted de novo or sampled --- undecidable by diversity data \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Derivations}\label{app:derivations}
+
+\subsection{Endowment capacity by site configuration}\label{app:capacity}
+For a site polymorphic in the couple, the four gene copies realize one of
+four configurations (founders disjoint, $h_A = h_E = h$). Writing the
+copy frequencies and the pool heterozygosity
+$H = 1 - \sum_i p_i^2$:
+
+\begin{center}\small
+\begin{tabular}{llcc}
+\toprule
+Configuration & Copy frequencies & Per-site $H$ & Density \\
+\midrule
+heterozygous in one founder only & $(1/4,\,1/4,\,1/4,\,1/4)^{c}$: two distinct & $0.375$ & $2h$ total \\
+same two alleles in both founders & $(1/2,\,1/2)$ & $0.500$ & overlap \\
+three alleles (one shared) & $(1/2,\,1/4,\,1/4)$ & $0.625$ & overlap \\
+four distinct alleles & $(1/4,\,1/4,\,1/4,\,1/4)$ & $0.750$ & overlap \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For largely disjoint founders the dominant contribution is the
+single-founder-heterozygous class, giving
+$H_{\mathrm{pool}} \approx 2h \times 0.375 = 0.75h$: the Definition
+\ref{def:endowment} coefficient. The bound
+$H_{\mathrm{pool}} \le 0.75\,h_{\mathrm{chimp}} = 1.43\times10^{-3}$
+follows from the chimpanzee value
+\citep{PradoMartinez2013}; the canonical $h = 1.576\times10^{-3}$ sits at
+$83\%$ of that bound.
+
+\subsection{Master-equation epoch integrals}\label{app:integrals}
+With the backward size function of Section~\ref{sec:sims}, the cumulative
+hazard to the couple generation is
+\begin{equation}\label{eq:appLam}
+\Lambda_c \;=\; \underbrace{\sum_{g=0}^{\gamma\text{-phase}}\frac{1}{2\cdot 2\gamma^{g}}}_{\text{expansion}}
+\;+\; \frac{T_0 - G - T_{\mathrm{rec}}}{2\Ne^{\max}}
+\;+\; \underbrace{\sum_{t<T_{\mathrm{rec}}}\frac{1}{2N(t)}}_{\text{recent growth}} ,
+\end{equation}
+with $G$ the expansion length and $T_{\mathrm{rec}}$ the recent-growth
+epoch. At the canonical point the three terms are $0.417$, $0.333$, and
+$0.007$ respectively, totaling $\Lambda_c = 0.759$. The depth integral
+\eqref{eq:Dbelow} evaluates per epoch; pairs coalescing during the
+expansion contribute depths clustered a few generations below $T_0$
+(where the hazard concentrates), pairs in the plateau contribute the
+truncated-exponential mean $\approx \Ne^{\max}\,(1-(1+\lambda
+T)e^{-\lambda T})/(1-e^{-\lambda T})$ at $\lambda T \approx 0.33$,
+and their weighted sum gives $D_{<c} = 8{,}311$ generations. The
+three-way consistency of Section~\ref{sec:canonical} (master equation
+$= $ msprime de-novo $+$ analytic backbone, all at $1.00\times10^{-3}$)
+is the numerical verification of these integrals.
+
+\subsection{The clock-free depth ratios}\label{app:ratios}
+The scoping theorem's test (i) uses divergence \emph{levels}, which no
+clock scaling touches. The first complete Neanderthal mitochondrial genome
+carries $206$ fixed differences from modern human mtDNAs
+\citep{Green2008}, and the Hohlenstein--Stadel lineage is deeper still
+\citep{Posth2017}, while the deepest modern--modern mtDNA divergence is
+$\sim$$60$--$100$ substitutions --- a ratio of $\sim$$2$--$3$. Under
+archaic-descent-from-the-couple, every extant mtDNA lineage would
+coalesce at the founding mother, making the two divergence classes
+\emph{equal}; the observed gap is possible only if the
+Neanderthal mitochondrial lineage is external to the couple (or was
+replaced in the archaic branch after split --- the replacement proposed
+for the Y chromosome by \citealp{Mendez2016} and for the mitochondrial
+lineage by \citealp{Posth2017}). The same arithmetic holds
+for the Y chromosome, where the Neanderthal lineage diverges from the
+modern Y by a factor $2.1$ (CI $1.7$--$2.9$; TMRCA $588$ vs.\ $275$ kya)
+\citep{Mendez2016}. Because
+both ratios compare divergences \emph{within the same molecule class},
+they are invariant under any rescaling $s$ of the molecular clock ---
+hence ``clock-free.''
+
+\subsection{The ancestral-rate correction factor}\label{app:sfactor}
+The correction factor of Section~\ref{sec:uni} is the published
+mutation-rate discrepancy, made explicit. The human--chimpanzee nuclear
+divergence is $d \approx 1.2$--$1.3\%$. At the paleontological split
+time $T_{\mathrm{split}} \approx 6.5$ Myr and 25-year generations, the
+implied per-generation rate is
+\begin{equation}\label{eq:muphy}
+\mu_{\mathrm{phy}} \;=\; \frac{d/2}{T_{\mathrm{split}}/25\,\mathrm{yr}}
+\;\approx\; \frac{0.0062}{2.6\times10^{5}}
+\;\approx\; 2.4\times10^{-8},
+\end{equation}
+whereas the direct trio-measured rate is
+$\mu_{\mathrm{trio}} = 1.0$--$1.3\times10^{-8}$
+\citep{Scally2012,Jonsson2017} --- a ratio
+$s = \mu_{\mathrm{phy}}/\mu_{\mathrm{trio}} \approx 2$. Clocks anchored
+on the split inherit the faster ancestral rate and therefore
+\emph{underestimate} recent coalescence dates by $\approx s$; applying
+the correction to the published mtDNA and Y estimates is the scan of
+Table~\ref{tab:clockscan}. The direct-clock quantities of this paper
+($\pi$, $E[T_2]$, TMR4A, LD) are measured on pedigrees and are not
+rescaled.
+
+\section{The feasibility grid at the canonical endowment}\label{app:grid}
+Table~\ref{tab:gridfull} gives the full $\gamma = 1.6$,
+$h = 1.576\times10^{-3}$ slice of the $540$-point grid: every $\pi$
+(in units of $10^{-3}$); asterisks mark infeasibility
+($|\pi - 1| > 15\%$). The canonical point
+($T_0 = 550$, $\Ne^{\max} = 3\times10^{4}$) is the paper's nominal
+scenario; the $10^{-3}$ band runs across the whole $T_0$ range at
+$\Ne^{\max} \ge 2\times10^{4}$, which is why the TMR4A window supplies
+the date constraint.
+
+\begin{table}[h]
+\centering\small
+\caption{Nucleotide diversity $\pi$ ($\times10^{-3}$) over the grid at
+$\gamma = 1.6$, $h = 1.576\times10^{-3}$. Asterisk: infeasible
+($|\pi - 10^{-3}| > 15\%$).}
+\label{tab:gridfull}
+\begin{tabular}{rccccc}
+\toprule
+$T_0$ (kya) & $\Ne^{\max}=10^4$ & $2\times10^4$ & $3\times10^4$ & $5\times10^4$ & $10^5$ \\
+\midrule
+150 & $0.756^{*}$ & $0.833^{*}$ & 0.860 & 0.883 & 0.901 \\
+200 & $0.733^{*}$ & $0.840^{*}$ & 0.880 & 0.913 & 0.940 \\
+250 & $0.712^{*}$ & $0.847^{*}$ & 0.899 & 0.943 & 0.978 \\
+300 & $0.693^{*}$ & 0.854 & 0.917 & 0.972 & 1.015 \\
+350 & $0.676^{*}$ & 0.860 & 0.935 & 1.000 & 1.053 \\
+400 & $0.661^{*}$ & 0.866 & 0.952 & 1.028 & 1.090 \\
+450 & $0.647^{*}$ & 0.872 & 0.968 & 1.055 & 1.126 \\
+500 & $0.634^{*}$ & 0.878 & 0.985 & 1.082 & $1.162^{*}$ \\
+\textbf{550} & $0.623^{*}$ & 0.883 & \textbf{1.000} & 1.108 & $1.198^{*}$ \\
+600 & $0.612^{*}$ & 0.888 & 1.015 & 1.133 & $1.234^{*}$ \\
+700 & $0.595^{*}$ & 0.898 & 1.044 & $1.183^{*}$ & $1.304^{*}$ \\
+800 & $0.581^{*}$ & 0.906 & 1.071 & $1.231^{*}$ & $1.372^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reproduction}\label{app:repro}
+The complete suite is the single script
+\texttt{sole\_progenitor\_model.py} (Python 3.12; numpy, scipy,
+matplotlib, msprime). It executes end to end in $\approx 3$ minutes on
+one core (\texttt{python3 sole\_progenitor\_model.py}); the
+\texttt{--quick} flag reduces replicate counts for a $\approx$20-second
+check. All stochastic components use fixed seeds (coalescent:
+$20260101+$; backbone: $99001$; linkage disequilibrium: $88001$;
+balanced-locus: $66001$; coalescence-rate profile: $770001+$), so every
+number in this paper is bit-reproducible. The
+outputs directory contains
+\texttt{feasibility\_grid.csv} (540 rows), \texttt{clock\_scan.csv},
+\texttt{sfs\_endowed\_pair.csv}, \texttt{ld\_decay\_endowed\_pair.csv},
+\texttt{ne\_profile\_endowed\_pair.csv},
+\texttt{hla\_regeneration.csv}, \texttt{scoping\_tests.csv},
+\texttt{empirical\_anchors.csv}, \texttt{archaic\_branch.csv},
+\texttt{feasibility\_summary.json},
+\texttt{feasibility\_report.txt}, and the eight figures.
