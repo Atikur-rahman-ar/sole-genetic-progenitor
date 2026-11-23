@@ -1,0 +1,27 @@
+ENDOWED-PAIR MODEL -- FEASIBILITY REPORT
+============================================================
+
+Canonical scenario: T0 = 550 kya (22000 generations), gamma = 1.6, Ne_max = 30,000,
+endowment h = 1.58e-03 per site (4.73M SNVs per founder; within the
+primate range bounded by human 3.1-4.1M and chimpanzee 5.7M SNVs).
+
+Master equation:  E[T2] = D_below + e^(-Lam_c) * [T0 + 0.75*h/(2*mu)]
+  Lambda_c = 0.759;  D_below = 8,311 gen; e^-Lam_c = 0.468
+  E[T2] = 41,671 generations = 1041.77 kya
+  pi = 2*mu*E[T2] = 1.000e-3  (observed 1.0e-3; required E[T2] 41,667 gen)
+
+TMR4A compression identity: TMR4A_true = T0 = 550 kya (Swamidass estimate 495 +/- 100 kya, direct clock).
+Joint feasibility window (pi feasible AND TMR4A CI): [400, 595.0] kya, nominal 550 kya.
+Descendant-clade window (archaic clades branch at/after founding): T0 in [550, 595] kya -- available at the canonical point.
+
+SFS: pi_total = 1.002e-3, theta_W = 1.379e-3, Tajima's D = -0.93
+  (observed: pi ~ 1.0e-3; strongly negative D ~ -2 in large-sample
+   series, Tennessen et al. 2012)
+
+Scoping: S1 dominant progenitorship (>=94-98% of nuclear DNA) unconditional;
+S2 descendant-clade full nuclear coverage at T0 in [550,595] kya (archaic clades
+branch from the couple's descendants; archaic uniparentals externally replaced
+per Mendez 2016 / Posth 2017 mechanisms); S3 (archaic uniparentals included)
+falsified by the clock-free depth-ratio test (Section K).
+
+Runtime: 159.0 s (quick=False)

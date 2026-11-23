@@ -1,0 +1,13 @@
+anchor,reference,type,finding
+"Nei, Maruyama & Chakraborty 1975","Evolution 29:1-10","theory","bottleneck of a single pair with rapid growth loses little diversity"
+"Barton & Charlesworth 1984","Ann Rev Ecol Syst 15:133-164","theory","single fertilized female + doubling growth retains >50% heterozygosity"
+"Slatkin & Excoffier 2012","Genetics 191:171-181","theory","two random individuals carry ~75% of population heterozygosity"
+"McMullan et al. 2018","Nat Ecol Evol 2:1000-1008","empirical","European ash-dieback invasion founded by two highly divergent individuals"
+"Kaeuffer et al. 2007","Proc R Soc B 274:527-533","empirical","island mouflon population founded by a single pair retains unexpected heterozygosity"
+"Xue et al. 2018","Biol Invasions 20:3297-3314","empirical","worldwide invasion of rapa whelk despite dramatic genetic bottleneck"
+"Szucs et al. 2017","Ecol Lett 20:436-444","empirical","founder effects have long-term fitness consequences; colonising populations persist"
+"Ewing et al. 2008","Conservation Biology 22:395-404","empirical","Mauritius kestrel: single wild pair to 200+ pairs; extreme inbreeding, persisted"
+"Jackson et al. 2022","Conservation Biology 36:e13918","empirical","pink pigeon: bottleneck to ~10 -> 400+; demographic recovery with genomic erosion"
+"von Seth et al. 2022","BMC Genomics 23:747","empirical","Chatham black robin: 5 founders, genomic erosion but persistence"
+"Hoelzel et al. 2024","Nat Ecol Evol 8:686-694","empirical","northern elephant seal: bottleneck ~20-30 to 200k+; low diversity, viable"
+"Rogers et al. 2020; Hu et al. 2023","Sci Adv 6:eaay5483; Science 381:979-984","literature","severe archaic-era bottlenecks independently inferred (neandersovan Ne~500; ~1,280 breeding individuals 930-813 ka)"

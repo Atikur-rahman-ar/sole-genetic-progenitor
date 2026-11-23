@@ -1,0 +1,48 @@
+{
+  "model": "Endowed-Pair (EP): sole-progenitor couple, no pre-bottleneck population",
+  "canonical": {
+    "T0_kya": 550.0,
+    "T0_gens": 22000,
+    "gamma": 1.6,
+    "ne_max": 30000.0,
+    "h_endowment": 0.001576,
+    "founder_snvs_million": 4.728,
+    "E_T2_gens": 41670.814411354404,
+    "pi": 0.0010000995458725058,
+    "Lambda_c": 0.758844438166078,
+    "D_below_gens": 8311.054485992907,
+    "depth_endowment_gens": 49249.99999999999
+  },
+  "constraints": {
+    "pi_observed": 0.001,
+    "E_T2_required_gens": 41666.666666666664,
+    "TMR4A_kya": [
+      495.0,
+      100.0
+    ],
+    "joint_window_kya": [
+      400,
+      595.0
+    ],
+    "descendant_clade_window_kya": [
+      550.0,
+      595.0
+    ]
+  },
+  "sfs": {
+    "pi_total": 0.001001523258412742,
+    "tajimas_D": -0.9310885943205255,
+    "pi_backbone": 0.0005534208593933655
+  },
+  "hla": {
+    "0.01": 2.172,
+    "0.02": 2.1426666666666665,
+    "0.05": 2.148,
+    "0.1": 2.1213333333333333,
+    "0.02_g2": 2.4633333333333334,
+    "0.05_g2": 2.41,
+    "new_line": 8704.535039777007
+  },
+  "runtime_sec": 158.95810174942017,
+  "seed_note": "fixed seeds: msprime 20260101+, backbone 99001, LD 88001, HLA 66001, NE 770001+"
+}

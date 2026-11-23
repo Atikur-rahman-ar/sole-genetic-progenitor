@@ -1,0 +1,9 @@
+quantity,value
+mean_founder_lineages_retained_s0.01,2.172
+mean_founder_lineages_retained_s0.02,2.143
+mean_founder_lineages_retained_s0.05,2.148
+mean_founder_lineages_retained_s0.10,2.121
+mean_founder_lineages_retained_s0.02_g2,2.463
+mean_founder_lineages_retained_s0.05_g2,2.410
+expected_new_lineages_full,8704.5
+gene_conversion_kappa,5.0

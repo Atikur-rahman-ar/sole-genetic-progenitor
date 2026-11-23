@@ -1,0 +1,6 @@
+test,prediction,observation,verdict
+"modern : archaic mtDNA divergence ratio","1 : 1 predicted (archaic uniparentals inside)","~1 : 2-3 observed (Green 2008: 206 diffs; Posth 2017: deeper HST)","FAILS -> archaic mtDNA replaced (Posth 2017 mechanism)"
+"modern : Neanderthal Y divergence ratio","1 : 1 predicted (archaic uniparentals inside)","ratio ~2.1 (CI 1.7-2.9); 588 vs 275 kya (Mendez 2016)","FAILS -> archaic Y replaced (Mendez 2016 mechanism)"
+"introgressed archaic tracts","couple-descended if archaic clades branch at/after T0","2-6% of non-African genomes (Sankararaman 2012-2016)","DCE at T0=550 kya covers them (split estimates 550-765 kya)"
+"modern mtDNA : modern Y MRCA coincidence","both = T0 (prediction)","mtDNA 150-200 kya vs Y 120-338 kya, overlapping CIs","CONSISTENT (unexplained coincidence in mainstream demography)"
+"archaic-branch heterozygosity","small descendant branches lose the endowment (drift), carry de-novo diversity only","archaic genomes several-fold less diverse than moderns (Meyer 2012; Pruefer 2014)","PREDICTED (Section N sweep)"
