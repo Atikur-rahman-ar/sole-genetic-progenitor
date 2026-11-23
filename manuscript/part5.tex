@@ -1,0 +1,689 @@
+\section{The sole-progenitor feasibility theorem}\label{sec:theorem}
+
+The strands of Sections~\ref{sec:endo}--\ref{sec:emp} assemble into the
+paper's central result.
+
+\begin{theorem}[Sole-progenitor feasibility]\label{thm:main}
+There exists a parameter vector
+\[
+\theta^{*} \;=\; \bigl(T_0^{*},\ \gamma^{*},\ \Ne^{\max*},\ h^{*}\bigr)
+\]
+with $T_0^{*} \in [400, 595]$ kya, $\gamma^{*} \in [1.6, 2.0]$,
+$\Ne^{\max*} \in [2\times10^{4}, 5\times10^{4}]$, and
+$h^{*} \in [1.4, 1.9]\times10^{-3}$ --- the last interval bounded by the
+heterozygosities of the observed human and chimpanzee genomes
+\citep{PradoMartinez2013,Auton2015} --- such that the endowed-pair
+trajectory $E(\theta^{*})$, which contains no pre-bottleneck population
+and whose founding couple are the sole genetic progenitors of every
+non-introgressed nucleotide of the descendant population, satisfies
+simultaneously:
+\begin{enumerate}
+\item the pairwise-diversity identity $\pi = 2\mu E[T_2]$ at the observed
+value ($\pi = 1.000\times10^{-3}$ vs.\ $10^{-3}$ at the canonical point,
+Eq.~\eqref{eq:canonval});
+\item the compression identity $\mathrm{TMR4A} = T_0$, matching the
+direct-clock estimate $495 \pm 100$ kya \citep{Swamidass2019,Swamidass2022};
+\item the observed autosomal coalescence-depth range
+($0.5$--$2.0$ Myr typical, $\ge 2$ Myr at the deepest loci);
+\item the strongly negative Tajima's $D$ of an expanding population
+($D = -0.93$ at the canonical point, of the observed sign and order ---
+the sign opposite to the one the classical bottleneck forecast predicted;
+the residual to the observed series is addressed qualitatively,
+Section~\ref{sec:limits});
+\item the observed short-range linkage-disequilibrium profile
+($E[r^2] \approx 0.40$--$0.30$ at $0.1$--$1$ kb, within the observed
+$0.3$--$0.5$ range);
+\item the uniparental identification of Proposition~\ref{prop:uni} with
+published mtDNA/Y confidence intervals under the ancestral-rate
+correction $s \ge 2.0$ of \citet{Scally2012} --- the theorem's one
+clock-conditional condition (Section~\ref{sec:uni});
+\item the invisibility of the bottleneck to PSMC/MSMC-type reconstruction
+(Section~\ref{sec:ne});
+\item the retention and regeneration of balanced-locus allelic richness
+(Sections~\ref{sec:ret}--\ref{sec:poly});
+\item under the descendant-clade extension, full nuclear coverage: the
+introgressed archaic tracts are couple-descended through the archaic
+branches, whose low diversity the model predicts (Theorem~\ref{thm:scope},
+Figure~\ref{fig:branch}).
+\end{enumerate}
+with the archaic uniparental compartments scoped per
+Theorem~\ref{thm:scope}.
+\end{theorem}
+
+\begin{proof}
+Each numbered condition is established in the section cited: (1) by
+Proposition~\ref{prop:master} and the canonical evaluation
+\eqref{eq:canonval} with the three-way consistency check of
+Section~\ref{sec:canonical}; (2) by Proposition~\ref{prop:tmr4a};
+(3) by the depth decomposition of Section~\ref{sec:window}; (4)--(5) by
+the simulations of Section~\ref{sec:sfsld}; (6) by Table~\ref{tab:clockscan};
+(7) by Section~\ref{sec:ne}; (8) by Eqs.~\eqref{eq:hlaret}--\eqref{eq:hlares};
+(9) by Theorem~\ref{thm:scope} and the branch sweep of
+Section~\ref{sec:scope}.
+Non-emptiness of the parameter region over the stated intervals is the
+content of the $540$-point grid (Table~\ref{tab:gridextract},
+Figure~\ref{fig:feasmap}).
+\end{proof}
+
+\subsection{Falsification conditions}
+A feasibility theorem is only as good as its falsifiers, and the model's
+are stated with the same precision as its claims:
+\begin{enumerate}
+\item a structure-robust revision of the direct-clock TMR4A estimate
+outside $[395, 595]$ kya (the compression identity then forces
+$T_0$ outside the diversity-feasible region, since feasibility requires
+$T_0 \gtrsim 400$ kya at any admissible endowment);
+\item resolution of the mutation-rate debate placing the ancestral-rate
+correction at $s < 1.5$ (the corrected uniparental intervals would then
+contain at most the window's youngest edge; Table~\ref{tab:clockscan}) ---
+this removes the uniparental identification alone; the window's autosomal
+support is untouched, Section~\ref{sec:uni};
+\item demonstration that mid-Pleistocene $\Ne$ was persistently below
+$2\times10^{4}$, with the growth-bias arguments against PSMC estimates
+rebutted (the grid's $\Ne^{\max} = 10^{4}$ row is infeasible at every
+$T_0$ in the window, at any admissible endowment);
+\item a genome-wide excess of phase-aligned common-variant pairs above the
+model's $50{:}50$ mixture prediction --- the endowment's two-point
+signature of Section~\ref{sec:sfsld}, directly measurable in
+phase-resolved data;
+\item a robust direct-clock resolution of the archaic--modern population
+split whose interval excludes $[550, 595]$ kya (scope S2 closes; scope S1
+is untouched);
+\item archaic genomes carrying heterozygosities well above the
+small-branch band of Figure~\ref{fig:branch} (which would contradict the
+descendant-clade reading of the introgressed fraction);
+\item a conversion-corrected lineage count above the retention ceiling of
+Eq.~\eqref{eq:hlaret} at any HLA-class locus (the per-locus test of
+Section~\ref{sec:roots}), which falsifies the class at balanced loci
+whatever the fate of the diversity-level arguments.
+\end{enumerate}
+Conditions 1--3 target the theorem's conditional layers (the TMR4A
+reconstruction, the uniparental clock, the plateau size); conditions
+4--7 target the model class itself. An adverse resolution of condition 1
+or condition 3 empties the window and with it the theorem; condition 2
+removes only the uniparental identification, leaving every direct-clock
+condition intact (Section~\ref{sec:uni}) --- the asymmetry that makes the
+uniparental layer corroborative rather than load-bearing. The theorem
+fails outright if condition 1, 3, 4, or 7 holds; it narrows, without
+failing, if conditions 2, 5, or 6 hold. Every condition is decidable on
+public data by published methods --- an exposure the position opposite
+the theorem does not share (Section~\ref{sec:asymmetry}).
+
+\section{Objections answered}\label{sec:objections}
+
+Table~\ref{tab:objections} runs the objection catalogue --- the standard
+diversity and structure objections as posed in the modern debate
+\citep{Gauger2012,Swamidass2019} and grounded in the classical bottleneck
+literature \citep{Nei1975,Ayala1995} --- against the model's responses and
+the sections that supply them.
+
+\begin{table}[t]
+\centering\small
+\caption{The objection catalogue and the endowed-pair responses.}
+\label{tab:objections}
+\begin{tabular}{p{4.6cm}p{6.4cm}p{4.2cm}}
+\toprule
+Objection & Response & Section \\
+\midrule
+``$N=2$ alone carries $6\times$ too little diversity'' &
+The figure assumes mutation-only diversity on a young bottleneck. With
+the endowment, the depth reservoir is internal: $0.75h/2\mu \approx
+1.23$ Myr $\ge$ the entire requirement &
+\ref{sec:master}, \ref{sec:canonical} \\
+``The couple must be sampled from
+$\Nepre \approx 3\times10^4$'' &
+That is the sampled-couple class. The EP class removes $\Nepre$ by
+treating the couple's genomes as the initial condition; feasibility
+holds without any pre-bottleneck population &
+\ref{sec:classes}, \ref{sec:endo} \\
+``The allele-frequency spectrum fits
+only bottlenecks older than $\sim$500 kya'' &
+Agreed and adopted: the joint window is $[400, 595]$ kya; the
+diversity constraint no longer pulls the date younger &
+\ref{sec:window} \\
+``mtDNA and Y MRCAs are at 150--300
+kya, not 500'' &
+Under sole progenitorship both MRCAs \emph{are} the couple
+(Prop.~\ref{prop:uni}); their published dates are anchored-clock
+estimates requiring the published $s \approx 2$ ancestral-rate
+correction; the uncorrected residual is the model's principal
+conditional layer &
+\ref{sec:uni} \\
+``TMR4A $\approx 500$ kya contradicts a
+recent couple'' &
+The compression identity makes TMR4A $= T_0$ exactly; the estimate is
+the model's own clock &
+\ref{sec:window} \\
+``PSMC/MSMC would show the bottleneck'' &
+One-generation bottlenecks are invisible at reconstruction resolution;
+the simulated profile shows a shallow depression, not $N=2$ &
+\ref{sec:ne} \\
+``Tajima's $D$ is too negative for a
+bottlenecked population'' &
+The EP model yields $D = -0.93$ at the canonical point --- the observed
+sign and order, and the sign opposite to the classical bottleneck
+forecast; the further deepening attributed to structure is argued from
+the literature and runs toward the data (Sec.~\ref{sec:limits}) &
+\ref{sec:sfsld} \\
+``LD would overshoot under a
+bottleneck-to-two'' &
+The phase-mixed endowment gives $E[r^2_0] = 1/2$; the simulated
+profile ($0.30$ at 1 kb) sits within the observed $0.3$--$0.5$ range ---
+no overshoot is produced &
+\ref{sec:sfsld} \\
+``HLA lineages coalesce beyond the
+human--chimp split'' &
+Ayala's model priced a protracted bottleneck and ignored gene
+conversion; one-generation retention is $2.1$--$2.5$ of 4 lineages;
+regeneration supplies $8{,}705$ candidate lineages against
+$\sim$$10^2$--$10^3$ observed; the deep-root lineage count remains the
+open per-locus test (Sec.~\ref{sec:roots}) &
+\ref{sec:poly} \\
+``Archaic introgression violates sole
+progenitorship'' &
+The descendant-clade extension: the introgressing populations are
+descendant branches of the couple, so admixture is gene flow within the
+couple's pedigree; S2 (full nuclear coverage) holds at $T_0 \in [550,
+595]$ kya, S1 (non-introgressed) unconditionally, and S3 (archaic
+uniparentals included) is falsified clock-free &
+\ref{sec:scope} \\
+``Two individuals cannot be the sole
+ancestors of Neanderthals, Denisovans, and modern humans alike'' &
+Under the DCE the archaic clades branch from the couple's descendants;
+their low diversity, deep cross-coalescence with moderns, and admixture
+date all follow from the same founding event &
+\ref{sec:scope} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The nature of the proof}\label{sec:nature}
+The theorem proved here is a claim of
+\emph{logical compatibility}, not of actuality: the diversity and
+structure of the human genome do not falsify a sole-progenitor couple in
+the window $[400, 595]$ kya. The distinction matters for what the
+argument can and cannot do. It cannot show that the couple existed; it
+can show --- and does --- that the population-genetic objections most
+often cited against the claim are either incorrect as stated, or correct
+only for a different model class, or correct as conditional layers that
+the model states openly.
+
+The proof's structure also clarifies the relationship between the two
+roads the debate has taken. The sampled-couple class proves a
+bottleneck-survival theorem: a couple \emph{carries} the diversity of a
+pre-existing population across a
+one-generation bottleneck. The present paper proves the feasibility
+theorem in the endowed-pair class: a couple \emph{sources} the diversity,
+if its genomes carry a divergence within the range that primate genomes
+in fact exhibit. The ``$\Nepre \ge 3\times10^{4}$'' that forced the
+carrier reading is not a fact about couples; it is a fact about
+\emph{randomly sampled} couples --- an artifact of the sampling
+assumption. Once the couple's genomes enter as an initial condition bounded
+by biology rather than by ancestry, the same equations that demanded a
+pre-bottleneck population are satisfied without one, at a bottleneck time
+that three independent autosomal arguments already preferred. Both model
+classes remain on the table; the diversity data as they stand do not
+choose between them, because both generate the same observables within
+their windows. What the data \emph{do} constrain --- the bottleneck time,
+the plateau size, the endowment magnitude, the scoping of the archaic
+fraction --- are stated quantitatively.
+
+The provenance of the endowment is the one question the mathematics
+cannot touch, and the paper's claim about it is underdetermination, not
+resolution. Two founders whose genomes carry $\sim$4.9 million SNVs
+each --- the coalescent-equivalent of $\Ne \approx 3.3\times10^{4}$
+(Section~\ref{sec:bound}) --- may have acquired that divergence in three
+ways: they may be \emph{sampled} from a population large enough to
+generate it (the sampled-couple class); they may be \emph{constituted de
+novo} at that divergence; or their genomes may be \emph{assembled} from
+diverged ancestral lineages, the way a hybrid's two haplotypes carry the
+divergence of their source populations. The genetics of their
+descendants is identical in the three cases --- that is the content of
+Eqs.~\eqref{eq:sampled} and \eqref{eq:master} sharing the same form ---
+so no diversity measurement can adjudicate the provenance, and a theory
+that pretends to is importing an assumption, not deriving a result. The
+paper's contribution is to have shown that the quantitative case against
+sole progenitorship, as posed in the diversity literature, does not exist
+at the stated strength; which provenance reading a reader accepts is not
+a population-genetic question.
+
+\subsection{The falsifiability asymmetry}\label{sec:asymmetry}
+The theorem's scientific standing is easiest to see from the shape of its
+exposure. Every constraint it satisfies is a mainstream result read on
+the direct clock; every correction it applies is a published
+reconciliation; its one free parameter is bounded by the heterozygosities
+of genomes that exist. Its falsifiers, accordingly, are measurable
+quantities, stated in advance and decidable on public data
+(Section~\ref{sec:theorem}): a revised TMR4A estimate, a resolved rate
+debate, a demonstrated plateau ceiling, a phase-resolved excess, an
+archaic--modern split interval, an archaic heterozygosity level, a
+corrected lineage count. This is the exposure that origin claims are
+usually said to avoid, and the model accepts it deliberately: seven
+numbers, every one of them measurable today, stand between it and
+refutation.
+
+The position opposite the theorem does not face the same exposure. To
+maintain the diversity objection against the feasibility result, a critic
+must conjoin at least four assumptions, and the conjunction is the point.
+(i) That the founding couple's genomes are a random sample of a
+pre-existing population. The identical-observables result --- Eqs.~\eqref{eq:sampled}
+and \eqref{eq:master} sharing one form --- makes that assumption
+undecidable by any diversity measurement; it is not established by the
+data, and it is not refutable by the data, which is the definition of an
+assumption carried rather than derived. It is also, verbatim, the
+assumption sole progenitorship denies, so the objection rests on assuming
+what is at issue. (ii) That the mid-Pleistocene plateau was persistently
+of order $10^{4}$. This requires discounting the transient peaks MSMC
+infers \citep{LiDurbin2011,SchiffelsDurbin2014}, the growth-bias
+arguments against low ancient-plateau readings, and the independent
+severe-bottleneck inference of \citet{Hu2023} --- and reconstructions
+that disagree with one another by factors of several cannot be read
+selectively without an argument the literature does not currently supply.
+(iii) That the ancestral-rate correction $s \approx 2$, documented on the
+nuclear genome and required to reconcile pedigree with phylogeny at all
+\citep{Scally2012}, does not transfer to the uniparental clocks. No
+published measurement establishes this, and none currently could: there
+is no pedigree calibration of archaic uniparental rates. (iv) That
+HLA-class sequence depths are clean coalescent signal. The conversion
+literature itself discredits that default \citep{GarriganHedrick2003},
+and the protocol that would settle the question has never been run on
+either side (Section~\ref{sec:roots}).
+
+No single assumption in this list is unreasonable to entertain; the
+objection's dependence on their conjunction is what weakens it. Assumption
+(i) is untestable by the data the debate is conducted on; (ii) is
+selective among reconstructions that disagree among themselves; (iii) is
+untestable on present data; (iv) is untested where a test exists. The
+falsifiability gradient therefore runs against the objection, not the
+theorem: the theorem names the numbers that would destroy it, while the
+objection holds only if a conjunction of assumptions --- none
+individually established, one in principle unestablishable on diversity
+data --- is granted silently. The paper's claim to scientific consistency
+is exactly this: on every quantity the data can measure --- $\pi$,
+coalescence depths, spectral sign, linkage disequilibrium, TMR4A, the
+plateau band, lineage counts --- the sole-progenitor claim in its stated
+scope is unrebutted, and the remaining disagreement sits on assumptions
+the data cannot reach.
+
+\section{Scope and limitations}\label{sec:limits}
+Six limitations bound the theorem.
+\begin{enumerate}
+\item \emph{The uniparental conditional layer.} The model's principal
+tension is the anchored-clock dating of the mtDNA and Y MRCAs
+(Section~\ref{sec:uni}). The published ancestral-rate correction
+\citep{Scally2012} closes it at $s \ge 2.0$ --- a factor calibrated on
+nuclear divergence, whose transfer to the single-locus uniparental clocks
+is itself unproven and is part of the layer's conditionality
+(Section~\ref{sec:uni}); if the correction is
+rejected, the uniparental dates prefer $T_0 \approx 200$--$300$ kya,
+which the EP class admits only at $\Ne^{\max} \ge 2\times10^{4}$ with the
+upper endowment ($\pi \approx 0.9$--$1.0\times10^{-3}$) --- feasible for
+diversity but outside the TMR4A window unless the compression estimate is
+itself structure-inflated by $\sim$1.5--$2\times$ in the direction
+documented for structure-biased coalescent inference
+\citep{ErikssonManica2012,Scerri2019}. The two corrections trade off; no
+parameterization known to us closes both at once without one of them,
+and the paper does not claim otherwise.
+\item \emph{The plateau size.} Feasibility requires
+$\Ne^{\max} \ge 2\times10^{4}$ --- the model's second conditional layer,
+and a strong one. Published long-term reconstructions for human ancestry
+frequently sit near $\Ne \approx 10^{4}$, a plateau at which the grid is
+infeasible at every $T_0$ (Table~\ref{tab:gridfull}); the requirement is
+met only at the upper end of the published reconstructions --- the
+transient peaks MSMC infers \citep{LiDurbin2011,SchiffelsDurbin2014} and
+the growth-bias arguments that discount low ancient-plateau readings ---
+and if the low-end readings are taken at face value, the EP class fails.
+The theorem is therefore conditional on that reading of the demographic
+literature, stated with its falsifier (condition 3,
+Section~\ref{sec:theorem}).
+\item \emph{The endowment provenance.} The model takes $h$ as an initial
+condition (Section~\ref{sec:nature}); its generation mechanism is outside
+population genetics.
+\item \emph{Backbone approximation.} The backbone's segregating fraction
+is computed under a four-allele approximation; mixed 2/3-allele
+configurations shift $\theta_W$ by a few percent and $D$ by less.
+\item \emph{Structure not simulated jointly.} The structure-dependent
+refinements (deeper $D$, spectrum corrections, TMR4A inference bias) are
+argued from the cited literature rather than simulated in this paper's
+grid; the Tajima's-$D$ claim in particular is open at exactly this point
+--- if a structured simulation of the EP class fails to deepen $D$
+materially below the canonical $-0.93$, the spectrum condition holds in
+sign and order only. A structured joint simulation is the natural next
+step.
+\item \emph{Scoping and the descendant-clade layer.} The theorem covers
+the non-introgressed genome unconditionally (scope S1); full nuclear
+coverage (S2, the descendant-clade extension) is conditional on
+$T_0 \in [550, 595]$ kya and on archaic uniparentals replaced from
+outside the couple's descent --- which makes sole progenitorship a claim
+about modern genomes, not about the archaic clades' uniparental
+compartments (Section~\ref{sec:scope}) --- and scope S3 is falsified
+(Theorem~\ref{thm:scope}). The $\sim$2--6\%
+introgressed fraction is a shared boundary of every model in the debate.
+The DCE's split condition sits at the youngest edge of the published
+archaic--modern divergence estimates ($550$--$765$ kya,
+\citealp{Pruefer2014}); a robust resolution excluding that edge narrows
+the claim to S1 without touching it.
+\end{enumerate}
+
+These six prices are the theorem's own, and they are quantified, bounded,
+and carried with falsifiers. Their mirror image belongs in the same
+accounting: each has a symmetric assumption on the objection's side ---
+the sampled reading no diversity measurement can test
+(Section~\ref{sec:nature}), the persistently low plateau that must
+discount the upper reconstructions and the growth-bias arguments, the
+refusal of a published correction (limit 1), the uncorrected HLA depths
+(Section~\ref{sec:roots}). A reader weighing the two positions weighs a
+priced conditionality against an unpriced one
+(Section~\ref{sec:asymmetry}).
+
+\section{Conclusion}\label{sec:conclusion}
+The paper's central claim, in one sentence: \emph{a founding couple of
+$N=2$ individuals, carrying a genomic endowment within the range that
+natural primate genomes exhibit, expanding rapidly at $T_0 \approx 550$
+kya, reproduces the observed diversity, frequency spectrum,
+coalescence-depth distribution, linkage-disequilibrium profile,
+uniparental genealogy structure, and balanced-locus richness of modern
+humans --- and, under the descendant-clade extension, accounts for the
+introgressed archaic fraction as descendant-branch gene flow, with the
+archaic branches' low diversity predicted rather than postulated --- with
+no pre-bottleneck population in the model class: the endowment does
+numerically what the sampled-couple class does with its $\Nepre$, the two
+classes generate identical observables, and the data as they stand do not
+choose between them. What the theorem establishes is underdetermination
+under exact bounds: the diversity objection fails as stated, the
+admissible window is $[400, 595]$ kya, at least $47\%$ of today's
+diversity must be carried into the founding event ($h \ge
+0.63\times10^{-3}$), and the endowment's provenance --- sampling, de-novo
+constitution, or assembly from diverged lineages --- lies beyond any
+diversity measurement, which is why the historical objection never
+followed from the data.} The
+argument required no new genetics: it required the removal of one
+assumption --- that the couple is a random sample --- and the honest
+pricing of the two conditional layers that remain: the uniparental clock
+calibration, a conditional corroboration that the window's autosomal
+evidence does not depend on, and the plateau size, a strong requirement
+met only at the upper end of the published reconstructions --- stated
+with their falsifiers. The
+historical diversity objection, under which two individuals were said to
+carry too little variation to found a species, is thereby answered in its
+strongest form: the diversity two primates can carry is not a shortfall
+against the requirement but a reservoir exceeding it, and the structure
+of the modern genome --- spectrum, depths, disequilibria, balanced loci,
+archaic branches --- is what that reservoir plus half a million years of
+mutation and drift predicts. The position that would restore the
+objection must grant, silently, what the data cannot test; the position
+defended here asks only what the data can measure. On the measurable
+quantities the theorem stands: a sole-progenitor couple at
+$T_0 \approx 550$ kya is consistent with every mainstream constraint the
+human genome supplies, its conditional layers are priced and carry
+falsifiers, and the historical diversity objection --- the reason the
+claim was dismissed --- does not survive the removal of its one hidden
+assumption.
+
+\section*{Data and code availability}
+
+Every quantitative result in this paper --- the master-equation
+evaluation, the $540$-point feasibility grid, the msprime coalescent
+simulations, the site-frequency spectrum and Tajima's $D$, the
+linkage-disequilibrium decay, the effective-size profile, the HLA
+regeneration calculus, the scoping tests, and the empirical anchors --- is
+emitted by a single fixed-seed Python script,
+\texttt{sole\_progenitor\_model.py}, which executes end to end in
+${\approx}\,3$ minutes on one core (\texttt{python3
+sole\_progenitor\_model.py}; the \texttt{--quick} flag gives a
+${\approx}\,20$-second check). The complete package --- the script, all
+simulation outputs, the pinned requirements file, the citation-audit
+report, and the full \LaTeX{} source of the manuscript --- is publicly
+available at
+\url{https://github.com/Atikur-rahman-ar/sole-genetic-progenitor}. All
+stochastic components use the fixed seeds listed in
+Appendix~\ref{app:repro}, so every number in this paper is
+bit-reproducible from the repository alone. The paper generates no new
+sequence data and reads no proprietary or restricted data: every empirical
+quantity it uses is taken from the published studies cited in the text,
+and the corresponding values are tabulated as explicit anchors in
+\texttt{outputs/empirical\_anchors.csv} of the repository.
+
+\begin{thebibliography}{60}
+\setlength{\itemsep}{1pt}
+
+\bibitem[Auton et al.(2015)]{Auton2015}
+Auton, A., et al. (2015). A global reference for human genetic variation.
+\emph{Nature} 526:68--74.
+
+\bibitem[Ayala(1995)]{Ayala1995}
+Ayala, F.J. (1995). The myth of Eve: molecular biology and human origins.
+\emph{Science} 270:1930--1936.
+
+\bibitem[Barton and Charlesworth(1984)]{BartonCharlesworth1984}
+Barton, N.H. \& Charlesworth, B. (1984). Genetic revolutions, founder
+effects, and speciation. \emph{Annual Review of Ecology and Systematics}
+15:133--164.
+
+\bibitem[Cann et al.(1987)]{Cann1987}
+Cann, R.L., Stoneking, M. \& Wilson, A.C. (1987). Mitochondrial DNA and
+human evolution. \emph{Nature} 325:31--36.
+
+\bibitem[Crow and Kimura(1970)]{CrowKimura1970}
+Crow, J.F. \& Kimura, M. (1970). \emph{An Introduction to Population
+Genetics Theory}. Harper \& Row, New York.
+
+\bibitem[Eriksson and Manica(2012)]{ErikssonManica2012}
+Eriksson, A. \& Manica, A. (2012). Effect of ancient population structure
+on the degree of polymorphism shared between modern human populations and
+ancient hominins. \emph{Proceedings of the National Academy of Sciences
+USA} 109, doi:10.1073/pnas.1200567109.
+
+\bibitem[Ewing et al.(2008)]{Ewing2008}
+Ewing, S.R., et al. (2008). Inbreeding and loss of genetic variation in a
+reintroduced population of Mauritius kestrel. \emph{Conservation Biology}
+22:395--404.
+
+\bibitem[Fenner(2005)]{Fenner2005}
+Fenner, J.N. (2005). Cross-cultural estimation of the human generation
+interval for use in genetics-based population divergence studies.
+\emph{American Journal of Physical Anthropology} 128:415--423.
+
+\bibitem[Garrigan and Hammer(2006)]{GarriganHammer2005}
+Garrigan, D. \& Hammer, M.F. (2006). Reconstructing human origins in the
+genomic era. \emph{Nature Reviews Genetics} 7:669--680.
+
+\bibitem[Garrigan and Hedrick(2003)]{GarriganHedrick2003}
+Garrigan, D. \& Hedrick, P.W. (2003). Detecting adaptive molecular
+polymorphism: lessons from the MHC. \emph{Evolution} 57:1707--1712.
+
+\bibitem[Gauger et al.(2012)]{Gauger2012}
+Gauger, A.K., Axe, D. \& Luskin, C. (2012). \emph{Science and Human Origins}.
+Discovery Institute Press, Seattle.
+
+\bibitem[Green et al.(2008)]{Green2008}
+Green, R.E., et al. (2008). A complete Neandertal mitochondrial genome
+sequence determined by high-throughput sequencing. \emph{Cell}
+134:416--426.
+
+\bibitem[Hill and Weir(1988)]{HillWeir1988}
+Hill, W.G. \& Weir, B.S. (1988). Variances and covariances of squared
+linkage disequilibria for finite populations. \emph{Theoretical
+Population Biology} 33:54--78.
+
+\bibitem[Hoelzel et al.(2024)]{Hoelzel2024}
+Hoelzel, A.R., et al. (2024). Genomics of post-bottleneck recovery in the
+northern elephant seal. \emph{Nature Ecology \& Evolution} 8:686--694.
+
+\bibitem[H\"ossjer and Gauger(2019)]{HossjerGauger2019}
+H\"ossjer, O. \& Gauger, A.K. (2019). A single-couple human origin is
+possible. \emph{BIO-Complexity} 2019(1):1--20. doi:10.5048/BIO-C.2019.1.
+
+\bibitem[Hu et al.(2023)]{Hu2023}
+Hu, W., Hao, Z., Du, P., Di, F.Z., et al. (2023). Genomic inference of a
+severe human bottleneck during the Early to Middle Pleistocene transition.
+\emph{Science} 381:979--984.
+
+\bibitem[Hudson(1990)]{Hudson1990}
+Hudson, R.R. (1990). Gene genealogies and the coalescent process.
+\emph{Oxford Surveys in Evolutionary Biology} 7:1--44.
+
+\bibitem[Jackson et al.(2022)]{Jackson2022}
+Jackson, H.A., et al. (2022). Genomic erosion in a demographically
+recovered bird species during conservation rescue. \emph{Conservation
+Biology} 36:e13918.
+
+\bibitem[J\'onsson et al.(2017)]{Jonsson2017}
+J\'onsson, H., et al. (2017). Parental influence on human germline de novo
+mutations in 1,548 trios from Iceland. \emph{Nature} 549:519--522.
+
+\bibitem[Kaeuffer et al.(2007)]{Kaeuffer2007}
+Kaeuffer, R., Coltman, D.W., Chapuis, J.-L., Pontier, D. \& R\'eale, D.
+(2007). Unexpected heterozygosity in an island mouflon population founded
+by a single pair of individuals. \emph{Proceedings of the Royal Society B}
+274:527--533.
+
+\bibitem[Karmin et al.(2016)]{Karmin2016}
+Karmin, M., et al. (2016). A recent bottleneck of Y chromosome diversity
+coincides with a global change in culture. \emph{Genome Research}
+26:459--466.
+
+\bibitem[Kong et al.(2012)]{Kong2012}
+Kong, A., et al. (2012). Rate of de novo mutations and the importance of
+father's age to disease risk. \emph{Nature} 488:471--475.
+
+\bibitem[Li and Durbin(2011)]{LiDurbin2011}
+Li, H. \& Durbin, R. (2011). Inference of human population history from
+individual whole-genome sequences. \emph{Nature} 475:493--496.
+
+\bibitem[McMullan et al.(2018)]{McMullan2018}
+McMullan, M., et al. (2018). The ash dieback invasion of Europe was
+founded by two genetically divergent individuals. \emph{Nature Ecology \&
+Evolution} 2:1000--1008.
+
+\bibitem[Mendez et al.(2013)]{Mendez2013}
+Mendez, F.L., et al. (2013). An African American paternal lineage adds an
+extremely ancient root to the human Y chromosome phylogenetic tree.
+\emph{American Journal of Human Genetics} 92:454--459.
+
+\bibitem[Mendez et al.(2016)]{Mendez2016}
+Mendez, F.L., Poznik, G.D., Castellano, S. \& Bustamante, C.D. (2016).
+The divergence of Neandertal and modern human Y chromosomes.
+\emph{American Journal of Human Genetics} 98:728--734.
+
+\bibitem[Meyer et al.(2012)]{Meyer2012}
+Meyer, M., et al. (2012). A high-coverage genome sequence from an archaic
+Denisovan individual. \emph{Science} 338:222--226.
+
+\bibitem[Nei et al.(1975)]{Nei1975}
+Nei, M., Maruyama, T. \& Chakraborty, R. (1975). The bottleneck effect and
+genetic variability in populations. \emph{Evolution} 29:1--10.
+
+\bibitem[Posth et al.(2017)]{Posth2017}
+Posth, C., Wi\ss{}ing, C., Kitagawa, K., et al. (2017). Deeply divergent
+archaic mitochondrial genome provides lower time boundary for African gene
+flow into Neanderthals. \emph{Nature Communications} 8:16046.
+
+\bibitem[Poznik et al.(2013)]{Poznik2013}
+Poznik, G.D., et al. (2013). Sequencing Y chromosomes resolves discrepancy
+in time to common ancestor of males versus females. \emph{Science}
+341:562--565.
+
+\bibitem[Prado-Martinez et al.(2013)]{PradoMartinez2013}
+Prado-Martinez, J., et al. (2013). Great ape genetic diversity and
+population history. \emph{Nature} 499:471--475.
+
+\bibitem[Pr\"ufer et al.(2014)]{Pruefer2014}
+Pr\"ufer, K., et al. (2014). The complete genome sequence of a Neanderthal
+from the Altai Mountains. \emph{Nature} 505:43--49.
+
+\bibitem[Rogers et al.(2020)]{Rogers2020}
+Rogers, A.R., Harris, N.S. \& Achenbach, J.D. (2020). Neanderthal-Denisovan
+ancestors interbred with a distantly related hominin. \emph{Science
+Advances} 6:eaay5483.
+
+\bibitem[Sankararaman et al.(2012)]{Sankararaman2012}
+Sankararaman, S., et al. (2012). The date of interbreeding between
+Neandertals and modern humans. \emph{PLoS Genetics} 8:e1002947.
+
+\bibitem[Sankararaman et al.(2014)]{Sankararaman2014}
+Sankararaman, S., et al. (2014). The genomic landscape of Neanderthal
+ancestry in present-day humans. \emph{Nature} 507:354--357.
+
+\bibitem[Scally and Durbin(2012)]{Scally2012}
+Scally, A. \& Durbin, R. (2012). Revising the human mutation rate:
+implications for understanding human evolution. \emph{Nature Reviews
+Genetics} 13:745--753.
+
+\bibitem[Scerri et al.(2019)]{Scerri2019}
+Scerri, E.M.L., Chikhi, L. \& Thomas, M.G. (2019). Beyond multiregional
+and simple out-of-Africa models of human evolution. \emph{Nature Ecology
+\& Evolution} 3:1370--1372.
+
+\bibitem[Schiffels and Durbin(2014)]{SchiffelsDurbin2014}
+Schiffels, S. \& Durbin, R. (2014). Inferring human population size and
+separation history from multiple genome sequences. \emph{Nature Genetics}
+46:919--925.
+
+\bibitem[Slatkin and Excoffier(2012)]{SlatkinExcoffier2012}
+Slatkin, M. \& Excoffier, L. (2012). Serial founder effects during range
+expansion: a spatial analog of genetic drift. \emph{Genetics}
+191:171--181.
+
+\bibitem[Swamidass(2019)]{Swamidass2019}
+Swamidass, S.J. (2019). \emph{The Genealogical Adam and Eve: The Surprising
+Science of Universal Ancestry}. IVP Academic, Downers Grove, IL.
+
+\bibitem[Swamidass(2022)]{Swamidass2022}
+Swamidass, S.J. (2022). The misunderstood science of genetic bottlenecks.
+Paper presented at the 2022 Annual Meeting; \emph{Peaceful Science}.
+
+\bibitem[Sz\'ucs et al.(2017)]{Szucs2017}
+Sz\'ucs, M., Melbourne, B.A., Tuff, T., Weiss-Lehman, C. \& Hufbauer,
+R.A. (2017). Genetic and demographic founder effects have long-term
+fitness consequences for colonising populations. \emph{Ecology Letters}
+20:436--444.
+
+\bibitem[Tajima(1989)]{Tajima1989}
+Tajima, F. (1989). Statistical method for testing the neutral mutation
+hypothesis by DNA polymorphism. \emph{Genetics} 123:585--595.
+
+\bibitem[Takahata(1990)]{Takahata1990}
+Takahata, N. (1990). A simple genealogical structure of strongly balanced
+allelic lines and trans-species evolution of polymorphism.
+\emph{Proceedings of the National Academy of Sciences USA} 87:2419--2423.
+
+\bibitem[Tenesa et al.(2007)]{Tenesa2007}
+Tenesa, A., et al. (2007). Recent human effective population size
+estimated from linkage disequilibrium. \emph{American Journal of Human
+Genetics} 80:495--505.
+
+\bibitem[Tennessen et al.(2012)]{Tennessen2012}
+Tennessen, J.A., et al. (2012). Evolutionary history and adaptation from
+high-coverage whole-genome sequence data. \emph{Science} 337:64--74.
+
+\bibitem[Vigilant et al.(1991)]{Vigilant1991}
+Vigilant, L., Stoneking, M., Harpending, H., Hawkes, K. \& Wilson, A.C.
+(1991). African populations and the evolution of human mitochondrial DNA.
+\emph{Science} 253:1503--1507.
+
+\bibitem[von Salom\'e et al.(2007)]{vonSalome2007}
+von Salom\'e, J., Gyllensten, U. \& Bergstr\"om, T.F. (2007). Full-length
+sequence analysis of the HLA-DRB1 locus suggests a recent origin of
+alleles. \emph{Immunogenetics} 59:261--271.
+
+\bibitem[von Seth et al.(2022)]{vonSeth2022}
+von Seth, J., et al. (2022). Genomic trajectories of a near-extinction
+event in the Chatham Island black robin. \emph{BMC Genomics} 23:747.
+
+\bibitem[Watterson(1975)]{Watterson1975}
+Watterson, G.A. (1975). On the number of segregating sites in genetical
+models without recombination. \emph{Theoretical Population Biology}
+7:256--276.
+
+\bibitem[Wright(1931)]{Wright1931}
+Wright, S. (1931). Evolution in Mendelian populations. \emph{Genetics}
+16:97--159.
+
+\bibitem[Xue et al.(2018)]{Xue2018}
+Xue, D., Graves, J., Carranza, A., et al. (2018). Successful worldwide
+invasion of the veined rapa whelk, \emph{Rapana venosa}, despite a
+dramatic genetic bottleneck. \emph{Biological Invasions}
+20:3297--3314.
+
+\end{thebibliography}
