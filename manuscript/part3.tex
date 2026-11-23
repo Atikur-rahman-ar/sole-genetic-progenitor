@@ -1,0 +1,305 @@
+\section{Uniparental clocks under sole progenitorship}\label{sec:uni}
+
+\subsection{The forced identification}
+Under sole progenitorship the uniparental genealogies are forced, not
+fitted: every extant mitochondrial genome descends from the founding
+mother's single mtDNA molecule, and every extant Y chromosome from the
+founding father's single Y. The roots of both trees \emph{are} the couple:
+
+\begin{proposition}[Uniparental identification]\label{prop:uni}
+Under an EP trajectory, the mitochondrial MRCA of all extant lineages is
+the founding mother and the Y-chromosomal MRCA is the founding father; both
+true dates equal $T_0$ identically, and the observed near-coincidence of
+the two dates is a prediction of the model rather than a coincidence.
+\end{proposition}
+
+The second sentence deserves emphasis. In mainstream demography the
+mtDNA-Eve date ($\sim$150--200 kya) and the Y-chromosomal Adam date
+($\sim$120--340 kya depending on study \citep{Poznik2013,Mendez2013,
+Karmin2016}) are estimates of independent coalescent functionals whose
+rough alignment has no particular reason to hold; under sole
+progenitorship their alignment is structural, because both equal $T_0$.
+The observed overlap of the two published confidence intervals is
+therefore evidence \emph{for} the single-couple structure in exactly the
+sense in which the model is testable --- and it was noticed early in the
+debate as a datum any origin model must accommodate
+\citep{Cann1987,Vigilant1991}.
+
+\subsection{The calibration layer}
+The \emph{dates} of the two MRCAs, however, are estimates on anchored
+clocks. The mtDNA rate is calibrated on the human--chimpanzee mitochondrial
+divergence at an assumed split time, and the Y rate likewise. Here the
+well-documented rate-calibration problem enters: the directly measured
+per-generation autosomal mutation rate, $\mu \approx 1.0$--$1.3\times10^{-8}$
+\citep{Scally2012,Jonsson2017}, is roughly \emph{half} the
+phylogenetic rate obtained by dividing the human--chimpanzee nuclear
+divergence by the paleontological split time of $\sim$6.5 Myr.
+\citet{Scally2012} review the reconciliation: either ancestral generation
+times were much shorter, or the ancestral mutation rate was higher, or
+both --- in the standard reading, the ape-lineage mutation rate has declined
+over time by a factor of roughly $2$. Any date estimated on a clock
+anchored to the split therefore inherits an ancestral-rate bias: if the
+true recent rate is lower than the calibration-averaged rate, recent
+coalescence dates are \emph{underestimated} by the same factor.
+
+This paper's treatment of the uniparental constraint is precisely to
+apply that correction as a single clock-scaling factor $s$, with
+\begin{equation}\label{eq:sdef}
+\text{corrected date} \;=\; s \times \text{published estimate},
+\qquad s \in [1.0,\,2.5],
+\end{equation}
+and to ask at which $s$ the corrected uniparental intervals contain the
+joint feasibility window \eqref{eq:window}. The published estimate
+landscape is taken wide: mtDNA-Eve point estimates 150--200 kya with
+confidence intervals reaching 129--298 kya \citep{Vigilant1991,Cann1987};
+Y-Adam estimates spanning 120--156 kya \citep{Poznik2013} through
+208--338 kya \citep{Mendez2013} with intervals from 115 kya
+\citep{Karmin2016} to 338 kya. Table~\ref{tab:clockscan} and
+Figure~\ref{fig:clockscan} give the scan.
+
+\begin{table}[t]
+\centering\small
+\caption{Uniparental clock scan: corrected mtDNA/Y intervals versus the
+joint feasibility window $[400, 595]$ kya. Published mtDNA CI
+\citep{Vigilant1991,Cann1987}: 129--298 kya; published Y span
+\citep{Poznik2013,Mendez2013,Karmin2016}: 115--338 kya. Full scan:
+\texttt{clock\_scan.csv}.}
+\label{tab:clockscan}
+\begin{tabular}{ccccc}
+\toprule
+$s$ & mtDNA CI $\times s$ (kya) & Y span $\times s$ (kya) & contains window \\
+\midrule
+1.00 & 129--298 & 115--338 & no \\
+1.50 & 194--447 & 172--507 & no \\
+1.75 & 226--522 & 201--592 & no \\
+\textbf{2.00} & \textbf{258--596} & \textbf{230--676} & \textbf{yes} \\
+2.25 & 290--670 & 259--760 & yes \\
+2.50 & 322--745 & 288--845 & yes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{../outputs/fig7_clock_scan.pdf}
+\caption{The uniparental clock scan. Corrected mtDNA (blue) and Y (red)
+intervals as functions of the ancestral-rate correction factor $s$; the
+orange band is the joint feasibility window
+$[400, 595]$ kya. Containment holds for $s \ge 2.0$, the
+reconciliation factor of \citet{Scally2012}.}
+\label{fig:clockscan}
+\end{figure}
+
+The reading of Table~\ref{tab:clockscan} is the paper's principal
+conditional statement, and it is stated without disguise. At the
+uncorrected anchored clocks ($s = 1$), the published uniparental dates sit
+a factor of roughly two below the feasibility window --- the model's
+principal residual tension, stated as such. The choice between the
+corrected and uncorrected readings, however, is not a choice between a
+corrected model and an uncorrected one; it is a choice between two
+assumptions, and only one of them is documented. Declining the correction
+requires holding that a rate discrepancy demonstrated on the nuclear
+genome somehow leaves the uniparental clocks untouched --- an assumption
+with no published support and, on present data, no test. The asymmetry of
+documented support, not the mere existence of a correction, is what
+weights the layer toward the model. At $s = 2.0$ --- the
+factor that \citet{Scally2012} show is required to reconcile the
+pedigree-measured mutation rate with the paleontological split date
+\emph{on the nuclear genome} --- the corrected mtDNA confidence interval
+$[258, 596]$ kya contains the window, and the corrected Y span does so
+with greater margin. The correction is not an ad hoc device introduced for
+this model; it is the published reconciliation of a mainstream discrepancy,
+which the standard literature applies to the split date but has not
+previously applied to within-human uniparental coalescences. Applying it
+uniformly is the conservative move for the EP model, and declining to apply
+it is the conservative move for the standard model; the difference between
+the two treatments is exactly the kind of methodological asymmetry that
+formal modeling is meant to expose. Two caveats bound the layer's weight,
+and both are stated rather than absorbed. First, the factor $s$ is
+calibrated on \emph{nuclear} divergence --- the human--chimpanzee split
+measured genome-wide --- whereas mtDNA and Y are single non-recombining
+loci with calibration histories of their own; transferring the nuclear
+factor to them unchanged is an assumption of the scan, adopted because it
+is the only published reconciliation available and because the scan
+brackets it over $s \in [1.0, 2.5]$, not because it is established for
+these loci. Second, and consequently, the uniparental containment is
+conditional corroboration, not a load-bearing result: every autosomal
+condition of the theorem --- $\pi$, the depth range, the spectrum, LD,
+TMR4A, the $\Ne$-profile --- supports the window on the direct clock with
+no correction applied, and the model's feasibility stands or falls with
+those alone. What is lost if the correction is refused is the uniparental
+dates' agreement with the window, not the window: at $s = 1$ the published
+dates prefer $T_0 \approx 200$--$300$ kya, which the diversity constraints
+of Section~\ref{sec:endo} admit only at the upper edge of the primate
+endowment range and with $\Ne^{\max} \ge 2\times10^4$
+(Section~\ref{sec:limits}).
+
+\section{The frequency spectrum, linkage disequilibrium, and coalescence depth}\label{sec:sfsld}
+
+\subsection{Decomposition of the spectrum}
+The EP model's site-frequency spectrum is a mixture of two components with
+distinct signatures. The \emph{de-novo} component --- mutations accumulated
+since $T_0$ over a population expanding from four gene copies --- is
+generated by coalescent simulation (Section~\ref{sec:sims}); it carries the
+strong rare-variant excess of recent growth. The \emph{backbone} component
+--- the couple's endowed alleles, drifting from initial frequency
+$\tfrac14$ (four-allele sites) through the expansion --- carries the
+common-variant mass. At the canonical point the simulation gives
+$\pi_{\mathrm{denovo}} = 0.448\times10^{-3}$ and
+$\theta_{W,\mathrm{denovo}} = 1.154\times10^{-3}$ for the de-novo part,
+while the backbone contributes
+$\pi_{\mathrm{bb}} = H_{\mathrm{pool}}\,e^{-\Lambda_c} =
+0.553\times10^{-3}$ exactly and a segregating-site density of
+$1.16\times10^{-3}$ per bp (fraction $0.37$ of endowed sites still
+segregating). The totals,
+\begin{equation}\label{eq:sfstot}
+\pi_{\mathrm{total}} = 1.001\times10^{-3}
+\quad (\text{observed } 1.0\times10^{-3}), \qquad
+\theta_{W,\mathrm{total}} = 1.379\times10^{-3},
+\end{equation}
+reproduce the observed level to within $0.2\%$; the $0.001\times10^{-3}$
+gap between the simulated total and the exact master-equation value
+$1.000\times10^{-3}$ of Eq.~\eqref{eq:canonval} is the de-novo
+simulation's sampling noise ($0.448$ simulated against $0.447$ exact).
+The excess of $\theta_W$ over $\pi$ gives
+\begin{equation}\label{eq:Dval}
+\text{Tajima's } D \;=\; -0.93 \quad (100\text{-kb window convention, } n = 100).
+\end{equation}
+Genome-wide estimates for expanding human populations are of order
+$-2$ in large-sample series \citep{Tennessen2012} and of order $-1$ at
+population-scale sample sizes. The EP model reproduces the sign and the
+order of magnitude; it sits at the milder edge because the endowed
+backbone contributes intermediate-frequency variants that a
+pure-expansion model lacks, and the residual to the observed order is not
+closed by this paper. The direction of the comparison, however, deserves
+statement against the objection's own forecast, because the classical
+diversity objection carried one: a population founded by two individuals
+was expected to be depleted of rare variants, its Tajima's $D$ near zero
+or positive. The EP model produces the opposite --- a strongly negative
+$D$, generated by its expansion epoch on exactly the timescale the
+observed spectrum demands --- because the couple carries the
+common-variant backbone while mutation below $T_0$ supplies the rare
+tail. The observable the objection leaned on has the sign the objection
+did not expect, and the refinement that remains --- the further deepening
+that population structure contributes --- moves the model toward the
+data, not away from it. Two directions
+are expected to account for it, and both are argued from the literature
+rather than simulated here (Section~\ref{sec:limits}). Population
+structure within the
+post-bottleneck metapopulation --- the African subdivision that
+\citet{Scerri2019} argue for on archaeological and genetic grounds ---
+plausibly adds deme-private rare variants and deepens $D$ without touching
+any other constraint. The deepening is argued from the literature rather
+than simulated here, and until a structured simulation of the EP class is
+run the spectrum condition is claimed at the level on which the objection
+itself stood --- sign and order --- not detailed spectral fit. Independent SFS-based inference, separately,
+recognizes a severe deep
+bottleneck in human ancestry \citep{Hu2023}, confirming that the observed
+spectrum is bottleneck-shaped and relocating the question from
+\emph{whether} to \emph{when} --- exactly the question the EP window
+\eqref{eq:window} answers with a single generation at $T_0 \approx 550$
+kya. Figure~\ref{fig:sfs} shows the simulated spectrum against the
+constant-size equilibrium reference.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{../outputs/fig4_sfs.pdf}
+\caption{The EP model's derived-allele-frequency spectrum (de-novo
+component, coalescent simulation; backbone added separately in the text
+totals) against the constant-size equilibrium reference
+$\propto 1/i$. The rare-variant excess of the expansion epoch dominates
+the low-frequency end.}
+\label{fig:sfs}
+\end{figure}
+
+\subsection{Linkage disequilibrium}
+The endowment imposes a specific initial linkage structure: at any pair of
+segregating sites, the couple's four haploid genomes realize one of two
+phase configurations with equal probability --- aligned phases (two
+haplotypes at frequency $\tfrac12$, $r^2 = 1$) or opposite phases (four
+haplotypes at $\tfrac14$, $r^2 = 0$) --- so $E[r^2_0] = \tfrac12$. The
+expected decay of $E[r^2_0]$ over the post-bottleneck history is then
+governed by recombination and drift. Figure~\ref{fig:ld} shows the
+simulated profile (exact Wright--Fisher haplotype recursion during the
+expansion, hazard-equivalent rescaled drift during the plateau,
+Section~\ref{sec:sims}): $E[r^2] \approx 0.40$ at $0.1$ kb, $0.34$ at
+$0.5$ kb, and $0.30$ at $1$ kb, decaying to $0.04$ by $10$ kb. The
+observed genome-wide short-range values, $r^2(1\,\mathrm{kb})$ of order
+$0.3$--$0.5$ across populations and minor-allele-frequency conventions
+\citep{Tenesa2007}, bracket the simulated profile; the simulated value at
+1 kb, $0.30$, sits at the lower edge of the observed range, and
+genome-wide averages are diluted further by young de-novo pairs. The
+direction of the small residual is understood: genome-wide averages
+include young de-novo pairs whose LD is lower still, and population
+structure raises the backbone pairs' $r^2$; the profile is
+convention-sensitive at the $\pm 0.1$ level. What the simulation
+establishes is that the endowment's initial two-point structure does
+\emph{not} produce a detectable LD excess --- the opposite fear, that a
+four-haplotype origin would imprint genome-wide haplotype blockiness, is
+quantitatively false at 550 kyr of recombination time.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{../outputs/fig5_ld.pdf}
+\caption{Linkage-disequilibrium decay under the EP model at the canonical
+point: $E[r^2]$ between pairs of endowed common variants against distance.
+The shaded band marks the observed short-range values
+$r^2(1\,\mathrm{kb}) \approx 0.3$--$0.5$ \citep{Tenesa2007}. The bimodal
+structure (half the pairs start phase-aligned) produces the heavy tail
+visible in the medians.}
+\label{fig:ld}
+\end{figure}
+
+\subsection{Coalescence-depth distribution}
+The model's expected pairwise depth, $1{,}042$ kyr at the canonical point,
+is matched to the observed $\pi_{\mathrm{obs}}/2\mu$ by construction. Its
+\emph{distribution}, however, is a genuine prediction: depths concentrate
+just below $T_0$ for pairs coalescing in the expansion, extend to
+$T_0 \approx 500$ kyr for pairs landing on the same founder copy, and
+reach $T_0 + h/(2\mu) \approx 2.2$ Myr for cross-founder pairs, with
+locus-to-locus variance in the endowment extending the extreme to the
+$2$--$3$ Myr depths observed at the deepest autosomal loci
+\citep{GarriganHammer2005,LiDurbin2011}. The mixture reproduces the
+observed breadth of autosomal coalescence times ($0.5$--$2.0$ Myr typical,
+deepest loci beyond $2$ Myr) without any pre-bottleneck population ---
+the depth that the sampled-couple model imported from $\Nepre$ enters here
+as endowed divergence. This is the formal answer to the objection that an
+$N=2$ origin would leave all coalescences ``shallow'': it is the
+\emph{number of lineages} at $T_0$, not their pairwise depth, that the
+couple constrains, and four unrelated founder copies carry as much pairwise
+divergence as a small population does.
+
+\section{Detectability of the bottleneck}\label{sec:ne}
+A natural remaining objection holds that PSMC- and MSMC-type
+reconstructions \citep{LiDurbin2011,SchiffelsDurbin2014} would recover the
+bottleneck. Two independent arguments say otherwise, one from the literature
+and one from the present simulations. The literature argument is that a
+short, sharp bottleneck leaves no trace in
+reconstructions whose temporal resolution at the relevant depth is tens of
+thousands of years \citep{LiDurbin2011} and whose likelihood surface is
+smoothed by
+regularization. The simulation argument quantifies it for the EP model:
+from pairwise coalescence times under the canonical demography
+(Section~\ref{sec:sims}), the hazard-inversion profile
+(Figure~\ref{fig:neprof}) shows a shallow depression at the bottleneck
+epoch --- the bin containing $T_0$ implies $\Ne \approx 1.2\times10^{3}$
+against the plateau's $3\times10^4$ --- rather than a recovery of
+$N = 2$. An order-of-magnitude depression lasting a single resolution
+element, at a depth where PSMC's confidence bands are widest, is not
+recoverable as a bottleneck to two; it is indistinguishable from the mild
+ancient structure that real reconstructions already show. The resolution
+argument is quantitative: PSMC's temporal bin width at $0.5$ Myr depth is
+of order $15$--$30$ kyr \citep{LiDurbin2011}, and a bottleneck lasting a
+single generation is far below it.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{../outputs/fig6_ne_profile.pdf}
+\caption{PSMC-style implied $\Ne$ from the pairwise coalescence-rate
+profile under the canonical EP demography. The dashed line marks $T_0 =
+550$ kya, where the true population size is $2$: the reconstruction shows
+a shallow depression (implied $\Ne \approx 1.2\times10^{3}$ in the bin
+containing $T_0$), not a recovery of the true size --- the bottleneck is
+invisible as a bottleneck to two at PSMC resolution.}
+\label{fig:neprof}
+\end{figure}
