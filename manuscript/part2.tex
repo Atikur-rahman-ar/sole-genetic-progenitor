@@ -1,0 +1,312 @@
+\section{The endowment theorem}\label{sec:endo}
+
+This section derives the EP model's master equation, exhibits the canonical
+feasible point, maps the feasibility region over the full parameter grid,
+and proves the compression identity that ties the model to the independent
+TMR4A estimate. Throughout, ``feasible'' means
+$|\pi - \pi_{\mathrm{obs}}| \le 15\%$ with $\pi_{\mathrm{obs}} = 10^{-3}$.
+
+\subsection{Transmission of a four-allele endowment}\label{sec:trans}
+The first question is mechanical: can the couple's four allelic states at a
+locus survive reproduction at all? Let the father carry alleles $\{A, B\}$
+and the mother $\{C, D\}$; each child independently receives one paternal
+and one maternal allele.
+
+\begin{proposition}[Four-allele transmission]\label{prop:trans}
+The probability that all four founder alleles are represented among $n$
+children is
+\begin{equation}\label{eq:p4}
+P_4(n) \;=\; \bigl[1 - 2^{1-n}\bigr]^2 ,
+\end{equation}
+so that $P_4(2) = 0.250$, $P_4(3) = 0.563$, $P_4(4) = 0.766$,
+$P_4(5) = 0.879$, and $P_4(10) = 0.996$.
+\end{proposition}
+
+\begin{proof}
+The events ``both paternal alleles appear'' and ``both maternal alleles
+appear'' are independent. A specific paternal allele is absent from all $n$
+children with probability $2^{-n}$, and the two absence events are
+mutually exclusive, so the probability that both paternal alleles appear is
+$1 - 2^{1-n}$; likewise for the maternal pair. Multiplying gives
+Eq.~\eqref{eq:p4}.
+\end{proof}
+
+The values $0.25$, $0.56$, and $0.77$ for $n = 2, 3, 4$ follow directly
+from Eq.~\eqref{eq:p4}, and the rapid saturation is the quantitative form
+of the founder-flush intuition that rapid population growth means that few
+variants in the original couple are lost. Two consequences matter for what
+follows. First,
+the expansion phase of the EP model is not a near-loss event for the
+endowment: with $\gamma \ge 1.6$ the family size reaches double digits
+within a few generations and per-locus transmission failures become rare.
+Second, the losses that do occur are precisely priced by the hazard
+integral \eqref{eq:hazard}, which is why the master equation below needs no
+separate retention factor beyond $e^{-\Lambda_c}$.
+
+\subsection{The master equation of the endowed-pair model}\label{sec:master}
+Consider a pair of gene copies sampled today and traced backward. It
+coalesces during the post-bottleneck history (plateau and expansion) with
+the standard hazard \eqref{eq:hazard}; the density of coalescence at
+backward time $t$ is $\lambda(t)e^{-\Lambda(t)}$ with
+$\lambda(t) = 1/(2N(t))$, contributing the expected depth
+\begin{equation}\label{eq:Dbelow}
+D_{<c} \;=\; \int_0^{T_0-1} t\,\lambda(t)\,e^{-\Lambda(t)}\,\mathrm{d}t .
+\end{equation}
+A pair that survives to the couple generation (probability
+$e^{-\Lambda_c}$, with $\Lambda_c$ the hazard accumulated to the couple's
+generation) passes through the four founder copies. With probability
+$\tfrac14$ the pair lands on the same founder copy and coalesces at $T_0$;
+with probability $\tfrac34$ it lands on two different copies. For the
+different-copy landings, the two copies are unrelated \emph{within the
+model} --- their divergence is the endowment $h$ itself, independent of
+whether the two copies belong to the same founder (divergence $=$ that
+founder's own heterozygosity $\approx h$) or to different founders
+(divergence $d_{AE} \approx (h_A + h_E)/2 \approx h$ for disjoint,
+comparable founders). The mixture therefore collapses to a single
+endowment depth $h/(2\mu)$ added below the couple:
+
+\begin{proposition}[EP master equation]\label{prop:master}
+Under an endowed-pair trajectory $E(T_0, \gamma, \Ne^{\max}, h)$,
+\begin{equation}\label{eq:master}
+\boxed{\;
+E[T_2] \;=\; D_{<c} \;+\; e^{-\Lambda_c}\Big[T_0 + \tfrac{3}{4}\,\frac{h}{2\mu}\Big],
+\qquad \pi \;=\; 2\mu\,E[T_2],
+\;}
+\end{equation}
+where $D_{<c}$ and $\Lambda_c$ are computed from the demographic function
+by Eqs.~\eqref{eq:Dbelow} and \eqref{eq:hazard}.
+\end{proposition}
+
+\begin{proof}
+Immediate from the decomposition above: a pair either coalesces before the
+couple (contributing $D_{<c}$ in expectation through the hazard-weighted
+integral \eqref{eq:Dbelow}) or reaches the couple generation, where the
+same-copy case contributes $T_0$ and the different-copy case contributes
+$T_0 + h/(2\mu)$. Weighting the latter two cases by $\tfrac14$ and
+$\tfrac34$ gives the bracket in Eq.~\eqref{eq:master}. The heterozygosity
+form of the same statement --- present-day diversity
+$\pi = 2\mu\,D_{<c} + H_{\mathrm{pool}}\,e^{-\Lambda_c}$ with
+$H_{\mathrm{pool}} = \tfrac34 h$ --- follows by multiplying the bracket by
+$2\mu$ and agrees with the drift-decay view in which the pool heterozygosity
+is multiplied by the exact retention product
+$\prod_t(1 - 1/2N(t)) = e^{-\Lambda_c}$.
+\end{proof}
+
+Equation~\eqref{eq:master} is the EP analogue of the sampled-couple
+equation \eqref{eq:sampled}, with the term $\tfrac34\,(2\Nepre)$ replaced by
+$\tfrac34\,h/(2\mu)$. The comparison is the paper's central observation in
+equation form: the depth that the sampled-couple model imports from a
+pre-bottleneck population of size $\Nepre$ is imported by the EP model from
+the couple's own divergence. For the canonical founders,
+\begin{equation}\label{eq:depth}
+\frac{h}{2\mu} \;=\; \frac{1.576\times10^{-3}}{2.4\times10^{-8}}
+\;=\; 6.57\times10^{4}\ \text{generations}
+\;=\; 1.64\ \text{Myr},
+\end{equation}
+and $\tfrac34$ of this --- $4.92\times10^{4}$ generations $= 1.23$ Myr ---
+is the endowment's weighted contribution to $E[T_2]$: more than the
+\emph{entire} required $E[T_2] = 4.17\times10^{4}$ of constraint
+\eqref{eq:T2req}. The endowment
+is not a marginal patch; it is a depth reservoir of the same magnitude as
+the constraint.
+
+\subsection{The generation bound}\label{sec:bound}
+The endowment is a transmission requirement, and the master equation prices
+it exactly. Inverting Eq.~\eqref{eq:master} at $\pi = \pi_{\mathrm{obs}}$,
+\begin{equation}\label{eq:hreq}
+h \;=\; \frac{4}{3}\,\frac{\pi_{\mathrm{obs}} \;-\;
+2\mu\bigl[D_{<c} + e^{-\Lambda_c}T_0\bigr]}{e^{-\Lambda_c}} ,
+\end{equation}
+and since pairs coalescing before the couple have coalescence times below
+$T_0$, so that $D_{<c} \le (1-e^{-\Lambda_c})\,T_0$, while
+$e^{-\Lambda_c} \le 1$, every trajectory of the EP class obeys
+\begin{equation}\label{eq:floor}
+\pi \;\le\; 2\mu T_0 \;+\; \tfrac{3}{4}\,h
+\qquad\Longrightarrow\qquad
+h \;\ge\; \tfrac{4}{3}\,\bigl(\pi_{\mathrm{obs}} - 2\mu T_0\bigr)
+\;=\; 0.63\times10^{-3},
+\end{equation}
+or $1.9$ million SNVs per founder. The interpretation is the theorem's
+affirmative content, stated as a bound. Mutation accumulated below the
+couple can contribute at most $2\mu T_0 = 0.53\times10^{-3}$ per site ---
+$53\%$ of $\pi_{\mathrm{obs}}$, or $1.6$ million SNVs per founder --- no
+matter how fast the population grows; the remaining $47\%$ at minimum must
+be \emph{carried} into the founding event on the couple's four copies. At
+the canonical trajectory the split is $44.7\%$ de novo and $55.3\%$ carried
+(Eq.~\eqref{eq:canonval}): the endowment backbone
+$0.75\,h\,e^{-\Lambda_c} = 0.553\times10^{-3}$ exceeds the entire de-novo
+component. The historical objection --- that two individuals cannot supply
+the observed variation --- is correct in exactly this sense and no
+stronger: two individuals cannot \emph{generate} population-scale diversity
+in $550$ kyr, and the theorem never claims otherwise; what two primates
+\emph{can} do is carry it, and Eq.~\eqref{eq:floor} prices the carrying.
+It is worth naming the identity that connects the two model classes: the
+canonical endowment's depth $h/(2\mu) = 6.57\times10^{4}$ generations
+equals $2\Ne$ at $\Ne = 3.3\times10^{4}$ --- numerically the
+$\Nepre = 3\times10^{4}$ of the sampled-couple class. The replacement of
+$\tfrac34(2\Nepre)$ by $\tfrac34\,h/(2\mu)$ is therefore exact not only in
+form but in magnitude; what the EP class changes is not the depth of the
+reservoir but its \emph{assignment} --- from an ancestry to an initial
+condition --- and Section~\ref{sec:nature} returns to what follows from
+that and what does not.
+
+\subsection{The canonical point}\label{sec:canonical}
+The canonical parameterization of the paper is
+\begin{equation}\label{eq:canonical}
+T_0 = 22{,}000\ \text{generations}\ (550\ \text{kya}), \quad
+\gamma = 1.6, \quad
+\Ne^{\max} = 3\times10^{4}, \quad
+h = 1.576\times10^{-3},
+\end{equation}
+the endowment corresponding to $4.73$ million SNVs per founder --- $116\%$
+of the 1000 Genomes average and $83\%$ of the chimpanzee value
+\citep{PradoMartinez2013,Auton2015}. Evaluated exactly (fixed-seed script,
+Section~\ref{sec:sims}): $\Lambda_c = 0.759$,
+$e^{-\Lambda_c} = 0.468$, $D_{<c} = 8{,}311$ generations, giving
+\begin{equation}\label{eq:canonval}
+E[T_2] \;=\; 8{,}311 + 0.468\times\bigl[22{,}000 + 49{,}250\bigr]
+\;=\; 41{,}671\ \text{generations},
+\qquad
+\pi \;=\; 1.000\times10^{-3}.
+\end{equation}
+The master constraint \eqref{eq:T2req} is met to within $0.01\%$; the
+expected pairwise coalescence depth, $1{,}042$ kyr, lies inside the
+observed autosomal range of roughly $0.5$--$2.0$ Myr
+\citep{GarriganHammer2005,LiDurbin2011}. Three independent checks
+corroborate the decomposition at the same point. The coalescent simulation
+of the de-novo component (mutations younger than $T_0$, msprime,
+Section~\ref{sec:sims}) yields $\pi_{\mathrm{denovo}} = 0.448\times10^{-3}$,
+matching the master equation's $2\mu\,[D_{<c} + e^{-\Lambda_c}T_0] =
+0.447\times10^{-3}$ to $0.3\%$. The endowment backbone, evaluated exactly
+as $H_{\mathrm{pool}}\,e^{-\Lambda_c} = 0.75 \times 1.576\times10^{-3}
+\times 0.468 = 0.553\times10^{-3}$, brings the total to
+$1.000\times10^{-3}$ --- the same figure the master equation produces,
+now assembled from two independent simulation routes.
+
+\subsection{The feasibility region}\label{sec:feasregion}
+Figure~\ref{fig:reqendo} displays the inversion of Eq.~\eqref{eq:master}:
+for each $\Ne^{\max}$, the endowment $h_{\mathrm{req}}(T_0)$ required to
+reach $\pi_{\mathrm{obs}}$. The horizontal lines mark the biological
+bounds \eqref{eq:hbounds}. The figure carries the feasibility claim
+graphically: at $\Ne^{\max} = 3\times10^{4}$, the required endowment lies
+\emph{between} the human-average and chimpanzee bounds across the entire
+range $T_0 \in [400, 600]$ kya; at $\Ne^{\max} = 10^{4}$ it exceeds the
+chimpanzee bound at every $T_0$, so the canonical long-term
+$\Ne \approx 10^{4}$ is \emph{not} sufficient for sole progenitorship ---
+a genuine restriction of the EP class, reported here as such and discussed
+in Section~\ref{sec:limits}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{../outputs/fig1_required_endowment.pdf}
+\caption{Required endowment $h_{\mathrm{req}}(T_0)$ for
+$\pi_{\mathrm{obs}} = 10^{-3}$ at $\gamma = 1.6$, for three post-expansion
+plateau sizes. Horizontal lines: human-average endowment ($4.1$M SNVs,
+dotted) and chimpanzee endowment ($5.7$M SNVs, dashed)
+\citep{PradoMartinez2013,Auton2015}. Shaded band: the joint feasibility
+window of Section~\ref{sec:window}. At $\Ne^{\max} = 3\times10^4$ the
+required endowment lies within the primate range across the window; at
+$\Ne^{\max} = 10^4$ it does not.}
+\label{fig:reqendo}
+\end{figure}
+
+Table~\ref{tab:gridextract} extracts the $540$-point feasibility grid
+($12$ values of $T_0 \times 5$ plateau sizes $\times 3$ growth rates
+$\times 3$ endowments) at the canonical growth rate and endowment. The
+plateau-size requirement is the grid's sharpest message:
+$\Ne^{\max} \ge 2\times10^{4}$ is necessary, and values of
+$2$--$5\times10^{4}$ --- consistent with the mid-Pleistocene estimates at
+the upper range of PSMC reconstructions and with the transient
+$\sim10^{5}$ peaks inferred by MSMC \citep{LiDurbin2011,SchiffelsDurbin2014}
+--- give feasibility across the whole window.
+
+\begin{table}[t]
+\centering\small
+\caption{Feasible $T_0$ ranges (kya) at $\gamma = 1.6$ and the canonical
+endowment $h = 1.576\times10^{-3}$, by plateau size
+($|\pi - 10^{-3}| \le 15\%$). Full grid: \texttt{feasibility\_grid.csv}.}
+\label{tab:gridextract}
+\begin{tabular}{lccccc}
+\toprule
+$\Ne^{\max}$ & $10^4$ & $2\times10^4$ & $3\times10^4$ & $5\times10^4$ & $10^5$ \\
+\midrule
+feasible $T_0$ (kya) & none & 300--800 & 150--800 & 150--600 & 150--450 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{../outputs/fig3_feasibility_map.pdf}
+\caption{Nucleotide diversity $\pi$ (in units of $10^{-3}$) over the
+$(T_0, \Ne^{\max})$ plane at $\gamma = 1.6$ and the canonical endowment.
+The white-outlined band is the joint feasibility window
+(Section~\ref{sec:window}). The $10^{-3}$ level band runs through it at
+$\Ne^{\max} \ge 2\times10^4$.}
+\label{fig:feasmap}
+\end{figure}
+
+\subsection{TMR4A and the compression identity}\label{sec:window}
+Under sole progenitorship every locus in every living individual passes
+through the couple's four gene copies: at time $T_0$ the global ancestry
+contains exactly four lineages per locus, never more. The time at which the
+genome-wide ancestry compresses to four lineages --- the quantity
+\citet{Swamidass2019} named TMR4A and estimated from reconstructed
+ancestral recombination graphs --- is therefore \emph{identically} the
+couple's time:
+
+\begin{proposition}[Compression identity]\label{prop:tmr4a}
+Under an EP trajectory, $\mathrm{TMR4A}_{\mathrm{true}} = T_0$ exactly, for
+every parameterization.
+\end{proposition}
+
+\begin{proof}
+At $T_0$ the population consists of two diploid individuals, i.e.\ four
+gene copies per locus. No locus can have more than four ancestral lineages
+at $T_0$, and (absent a pre-bottleneck population) none has fewer to which
+the four extant clades could compress earlier. The genome-wide compression
+time --- the infimum of times at which every locus has $\le 4$ lineages ---
+is therefore $T_0$.
+\end{proof}
+
+The direct-clock estimate of this quantity is $495 \pm 100$ kya
+\citep{Swamidass2019,Swamidass2022}, obtained from autosomal coalescent
+reconstructions with pedigree-calibrated rates and recombination maps
+--- that is, on the \emph{direct} clock that Section~\ref{sec:framework}
+singled out as calibration-free. Setting
+$\mathrm{TMR4A}_{\mathrm{true}} = T_0$ restricts
+$T_0 \in [395, 595]$ kya. Intersecting with the diversity-feasible region
+of Table~\ref{tab:gridextract} gives the \textbf{joint feasibility window}
+\begin{equation}\label{eq:window}
+T_0^{*} \in [400,\,595]\ \text{kya},
+\qquad \text{nominal } T_0^{*} = 550\ \text{kya},
+\end{equation}
+represented on the paper's grid by the feasible points $\{400, 450, 500,
+550\}$ kya at $\gamma = 1.6$, $\Ne^{\max} = 2$--$3\times10^4$,
+$h = 1.576\times10^{-3}$. It is worth pausing on what has happened here.
+The independent autosomal argument of Swamidass (four-lineage compression)
+and the backward-simulation feasibility analysis of \citet{HossjerGauger2019}
+(a single-couple origin as recent as $\sim$500 kya consistent with genomic
+data) already converged on the $400$--$600$ kya window for a \emph{bottleneck
+of two}; the diversity constraint that in the sampled-couple class pulls the
+bottleneck date toward the present is absent from the EP class, because the
+depth it demanded is supplied by the endowment. The arguments now meet in
+the same window from three independent directions --- compression,
+backward simulation, and pairwise diversity. And the modern spectrum-based
+literature has reached the same qualitative verdict: SFS-based inference
+recognizes a severe bottleneck in human ancestry \citep{Hu2023}, confirming
+that the observed spectrum is bottleneck-shaped and relocating the debate
+from \emph{whether} to \emph{when} --- exactly the question the EP window
+answers.
+
+Two consistency checks close the section. First, the model's predicted
+per-locus coalescence-depth distribution tops out at
+$T_0 + h/(2\mu) \approx 550 + 1{,}642 \approx 2.2$ Myr for cross-founder
+pairs, consistent with the deepest observed human--human coalescences
+(~$2$--$3$ Myr at the deepest loci
+\citep{GarriganHammer2005,LiDurbin2011}) once locus-to-locus variance in
+the endowment is included. Second, the expected pairwise depth at the
+canonical point, $1{,}042$ kyr, is the quantity PSMC-type methods read as
+the ``typical'' coalescence depth of the genome; the observed value
+($\pi_{\mathrm{obs}}/2\mu \approx 1.04$ Myr) is matched by construction
+--- this is Eq.~\eqref{eq:T2req} satisfied, not assumed.
