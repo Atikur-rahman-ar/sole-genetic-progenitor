@@ -1,0 +1,414 @@
+\section{The polymorphism objection at balanced loci}\label{sec:poly}
+
+\subsection{The objection and its two errors}
+The classical form of the polymorphism objection is due to
+\citet{Ayala1995}: the HLA loci carry dozens of deeply diverged allelic
+lineages, some of which appear to coalesce before the human--chimpanzee
+split, and a bottleneck to four gene copies cannot transmit that many
+lineages. The objection contains two modeling errors, both documented in
+the literature on the objection's own terms \citep{Gauger2012,
+GarriganHedrick2003}. First, Ayala's
+simulation imposed a bottleneck of \emph{extended duration} --- a population
+held small for many generations --- whereas the single-couple claim
+requires exactly one generation at $N=2$, whose lineage-retention
+properties are those of Proposition~\ref{prop:trans}: transmission
+losses are per-generation events, and a one-generation excursion
+transmits three of four lineages in expectation (Section~\ref{sec:ret}).
+Second, the coalescence-depth estimates at HLA loci do not account for
+\emph{convergent evolution}: inter-allelic gene conversion at the MHC,
+which occurs at rates far above the genomic background, mimics deep
+common ancestry by importing segments between allelic lineages
+\citep{GarriganHedrick2003}. The trans-species depth of HLA alleles is
+therefore an
+upper bound contaminated by an unknown but demonstrably large conversion
+contribution, not a clean coalescent measurement; how much of the depth
+survives a conversion correction is exactly the lineage-count test of
+Section~\ref{sec:roots}.
+
+\subsection{Retention under balancing selection}\label{sec:ret}
+At an overdominant locus, lineage extinction is suppressed: a rare allele
+spends nearly all its copies in heterozygotes and enjoys the selective
+advantage $s$ of the heterozygote, so its extinction hazard scales down by
+$s/(2\Ne)$ per generation relative to the neutral rate
+\citep{Takahata1990}. An exact
+Wright--Fisher simulation of the coupled bottleneck-and-expansion process
+--- the expansion phase
+sampled generation by generation with the overdominant marginal fitness
+$1 + s(1-p)$ acting on each lineage, the plateau with the Takahata
+extinction-hazard reduction --- over the parameter sweep
+$s \in [0.01, 0.1]$ and $\gamma \in \{1.6, 2.0\}$ yields the expected
+retention of the four founder lineages. The result is
+\begin{equation}\label{eq:hlaret}
+E[\text{founder lineages retained}] \;=\; 2.1\text{--}2.5 \ \ \text{of } 4
+\end{equation}
+at the canonical growth schedule ($\gamma = 1.6$: $2.12$--$2.17$; at the
+doubling schedule $\gamma = 2.0$: $2.41$--$2.46$). A coalescent scaling
+that omits the earliest generations yields a higher figure; the exact
+simulation prices the earliest generations --- where $2\Ne s < 1$ and
+selection has not yet established protection --- generation by
+generation. The diversity-level consequence is
+identical under either treatment because the master equation
+\eqref{eq:master} already prices early lineage loss through the hazard
+$\Lambda_c$ (the expansion segment of the hazard integral includes the
+small-$N$ generations at their full $1/2N$ weight). The balanced-locus
+diversity calculation is therefore insensitive to which retention figure
+is adopted.
+
+\subsection{Regeneration of allelic richness}
+Retained lineages are the seed, not the harvest. At an HLA-scale target of
+$L \approx 3.3$ kb with intra-locus gene conversion at $\kappa = 5$ times
+the background rate --- a conservative multiplier for the MHC, where
+recombination and conversion rates reach one to two orders of magnitude
+above the genomic average \citep{GarriganHedrick2003} --- the supply of new
+selectable lineages is
+\begin{equation}\label{eq:hlares}
+\sum_t 2N(t)\,\mu L\kappa\,\cdot\,\tfrac{2s}{3}
+\;=\; 8{,}705
+\end{equation}
+new allelic lineages over the canonical $550$ kyr, where $2s/3$ is the
+classical establishment probability of a new allele under symmetric
+overdominance \citep{Takahata1990,CrowKimura1970}. Observed per-population
+HLA-DRB1 diversity is $11$--$28$ defined alleles, with on the order of
+$10^2$--$10^3$ lineages worldwide \citep{vonSalome2007}. The regeneration
+budget exceeds the observed richness
+by two orders of magnitude; the binding constraint is the equilibrium
+allele count under overdominance --- which the equilibrium calculation for
+the observed selection scales shows is met --- not the mutational supply.
+The same arithmetic covers the other
+classical balanced loci and the immunoglobulin-family receptors.
+
+\subsection{The lineage-count test}\label{sec:roots}
+Regeneration multiplies alleles on the retained backbone; it does not
+create independent deep roots. The binding constraint of the polymorphism
+objection is therefore not the number of alleles --- that is a supply
+question, and Eq.~\eqref{eq:hlares} shows supply is abundant --- but the
+number of \emph{pre-split allelic lineages} a locus requires: lineages
+whose genealogical depth exceeds anything that can be generated below
+$T_0$. The EP class caps this number at the retained founder lineages,
+$2.1$--$2.5$ of $4$ per locus (Eq.~\eqref{eq:hlaret}), with the depth of
+the retained lineages carried in the founders' copies as priced in the
+next subsection. The constraint is decidable rather than rhetorical,
+because gene conversion leaves sequence signatures: a conversion tract
+imports a segment whose genealogy conflicts with its flanking genealogy,
+and such tracts are mappable from whole-genome allelic alignments. The
+model's falsifier at balanced loci is accordingly explicit: \emph{a
+demonstration that any HLA-class locus requires more than four pre-split
+allelic roots after excluding mappable conversion tracts falsifies the EP
+class at balanced loci}, whatever the fate of the diversity-level
+arguments. The classical claim of dozens of deep lineages
+\citep{Ayala1995} predates whole-genome MHC assembly and inter-allelic
+conversion mapping; the lineage count under modern data is the quantity
+the debate should be conducted on. The symmetry of the position deserves
+explicit statement. This paper does not establish that the corrected count
+at any HLA-class locus is at or below four --- no such count has been
+published under a conversion-tract protocol, and the retention ceiling of
+Eq.~\eqref{eq:hlaret} is a prediction the data have not yet been shown to
+respect, only a ceiling the class imposes. What the analysis establishes
+is that the quantity has become countable: full-length allelic alignments
+for the HLA loci are public, conversion tracts are mappable from
+flanking-genealogy conflicts, and the protocol yields a single integer per
+locus to which both sides' claims are exposed at once --- the classical
+dozens-of-roots reading, which must survive the correction to stand, and
+the EP class, which fails at any locus whose corrected count exceeds its
+retention ceiling. The test is per-locus and cumulative, and the
+balanced-locus condition of the feasibility theorem (item 8 of
+Theorem~\ref{thm:main}) holds only if every balanced locus passes. Until
+the counts are run, the evidential standing of the deep-root half is
+symmetric --- no corrected count supports the classical reading and none
+contradicts the ceiling --- but the burden is not. The dozens-of-roots
+claim is the position in need of demonstration, and it has stood for three
+decades on depth estimates that the conversion literature itself
+discredits as clean coalescent signal; the EP class specifies its ceiling
+in advance and names the protocol that would test it. The regeneration
+calculus removes the objection's allelic-supply half outright
+(Eq.~\eqref{eq:hlares}); its deep-root half stands or falls with a
+corrected count that neither side has produced, and until one exists the
+genetic data contain no demonstration that any balanced locus requires
+more pre-split roots than the four copies the couple carries.
+
+\subsection{The endowment budget for deep alleles}
+One component of the HLA argument requires the endowment explicitly: the
+\emph{depth} of the retained lineages. Human and chimpanzee HLA alleles
+share lineages whose sequence divergence corresponds to many millions of
+years; under sole progenitorship such divergence, if real rather than
+conversion-generated, must reside in the founders' four copies. The
+information budget is trivial: the HLA-class coding targets total roughly
+$10^4$--$10^5$ bp across their loci, so endowing the couple with
+chimp-depth divergence at every balanced locus costs less than
+$10^{-4}$ of the genome-wide endowment budget already spent on
+Eq.~\eqref{eq:depth}. The deep-allele component of the objection is
+therefore not resource-limited; its evidential weight rests on the two
+countable questions --- how many independent pre-split roots the allelic
+genealogies require (the lineage-count test of Section~\ref{sec:roots})
+and how much of the apparent depth is conversion-generated --- and both
+are settled by sequence evidence, not by rhetoric.
+
+\section{Archaic admixture and the descendant-clade extension}\label{sec:scope}
+
+Sole progenitorship is a claim about \emph{all} modern DNA, and modern
+genomes contain one component whose provenance must be treated separately:
+the introgressed archaic fraction --- some $2$--$6\%$ of non-African nuclear
+DNA derives from Neanderthal and Denisovan sources
+\citep{Sankararaman2012,Sankararaman2014,Pruefer2014}. This section extends
+the EP model to that component. The extension is affirmative: under it, the
+introgressed tracts are not external DNA but couple-descended DNA returning
+to the modern branch through the archaic relatives, and the admixture event
+ceases to bound the claim.
+
+\subsection{The extension}
+The \emph{descendant-clade extension (DCE)} models the Neanderthal and
+Denisovan lineages as descendant branches of the founding couple's
+descendant population. The couple founds the metapopulation at $T_0$; its
+descendant branches separate into the modern-human stem and the archaic
+clades at a branching time coincident with (or immediately after) the
+founding; and the later admixture between the branches --- dated to
+$47$--$65$ kya on the direct clock \citep{Sankararaman2012} --- is gene flow
+\emph{within} the couple's pedigree. Under the DCE every nucleotide of every
+modern human genome, non-introgressed and introgressed alike, descends from
+the couple.
+
+\begin{theorem}[Descendant-clade coverage]\label{thm:scope}
+Let ``full coverage'' mean that every nucleotide of every modern human
+genome descends from the founding couple. Then:
+(i) full coverage holds if the archaic clades branch from the couple's
+descendant population; the branching condition requires $T_0$ to be at
+least as old as the youngest published direct-clock estimates of the
+archaic--modern population split ($550$--$765$ kya \citep{Pruefer2014};
+$737$ ka \citealp{Rogers2020}), giving the descendant-clade window
+$T_0 \in [550, 595]$ kya --- available at the canonical point
+\eqref{eq:canonical};
+(ii) full coverage \emph{including the archaic clades' uniparental
+compartments} is falsified by two clock-free tests --- the
+modern-to-archaic mtDNA divergence exceeds the modern--modern depth by
+roughly $2$--$3\times$ \citep{Green2008,Posth2017}, and the Neanderthal Y
+diverges from the modern Y by a factor $2.1$ (CI $1.7$--$2.9$; $588$ vs
+$275$ kya; \citealp{Mendez2016}) --- whereas single-couple descent predicts
+ratio $1$ for both;
+(iii) the claim scoped to the non-introgressed genome --- sole genetic
+progenitorship of the $\ge 94$--$98\%$ of modern nuclear DNA not traced to
+archaic introgression, plus the entirety of the maternally and paternally
+inherited compartments --- is consistent with every test above at any $T_0$
+in the joint window \eqref{eq:window}.
+\end{theorem}
+
+\begin{proof}
+(i) Under branch descent, a modern allele and an archaic allele coalesce
+either within the post-founding history of their branches or at the couple's
+four founder copies; the cross-branch pairs that land on the same founder
+copy coalesce exactly at $T_0$, and split estimators accordingly localize
+the clade divergence at $T_0$ --- a value the published direct-clock ranges
+contain at their youngest edge. The introgressed tracts, drawn from the
+archaic branch, therefore descend from the couple through the branch.
+(ii) Under descent of the archaic uniparentals, every pairwise mtDNA
+divergence (modern--modern and modern--archaic) equals $2\mu_{mt} T_0$
+exactly, and likewise for the Y; the observed ratios of roughly $2$--$3$
+contradict this at any clock scaling, because the ratios are
+divergence-level facts independent of rate calibration
+\citep{Green2008,Mendez2016}. (iii) At any window $T_0$ the introgression
+tracts postdate the couple; under scope (iii) they are treated as external,
+and all diversity constraints of Sections~\ref{sec:endo}--\ref{sec:poly}
+hold for the non-introgressed genome.
+\end{proof}
+
+\subsection{The archaic-branch prediction}
+The DCE makes a quantitative prediction that no external-admixture reading
+of the introgressed fraction makes: the archaic branches, having passed
+through the founding bottleneck and remained small, carry de-novo diversity
+only. A descendant branch of effective size $N_b$ loses its endowment at
+retention $e^{-\Lambda_b}$ with $\Lambda_b = T_b/(2N_b)$; at $N_b = 500$
+the retention over a $450$-kyr branch is $1.5\times10^{-8}$ ---
+effectively zero --- and the branch heterozygosity is de novo,
+$2\mu E[T_2] \approx 4\mu N_b$. Figure~\ref{fig:branch} sweeps the branch
+sizes: the modern branch (plateau $3\times10^4$) retains $47\%$ of the
+endowment and reaches $\pi \approx 10^{-3}$, while branches of
+$N_b \approx 10^3$--$10^4$ sit an order of magnitude lower ---
+bracketing the archaic genomes' observed heterozygosities, several-fold
+below present-day human levels \citep{Meyer2012,Pruefer2014}. The same
+picture is independently supported from two directions: the
+Neanderthal--Denisovan ancestors themselves passed through an extreme
+bottleneck of effective size near $500$ \citep{Rogers2020}, and SFS-based
+inference recognizes a severe reduction to $\sim$1,280 breeding
+individuals near $930$--$813$ kya in the ancestry of modern humans
+\citep{Hu2023}. The contrast between the branches is the prediction: one
+large branch keeps the endowment, the small branches lose it --- and the
+observed diversity pattern of modern versus archaic genomes follows.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.7\textwidth]{../outputs/fig8_archaic_branch.pdf}
+\caption{Heterozygosity of descendant archaic branches under the DCE as a
+function of branch effective size $N_b$ (branch duration $450$ kyr):
+constant-size branches (circles) and bottleneck-then-growth branches
+(squares). The dashed line marks the modern branch's canonical diversity
+($\pi = 1.0\times10^{-3}$, endowment retention $0.47$); small branches
+retain none of the endowment and carry de-novo diversity only, an order of
+magnitude below the modern value --- as observed for the archaic genomes
+\citep{Meyer2012,Pruefer2014}.}
+\label{fig:branch}
+\end{figure}
+
+\subsection{The uniparental boundary}
+The clock-free tests of Theorem~\ref{thm:scope}(ii) are the DCE's stated
+boundary, and the literature has already proposed the mechanism that
+defines it. The Neanderthal Y lineage is absent from modern humans, and its
+deep divergence is consistent with replacement in the archaic branch after
+the split \citep{Mendez2016}; the deeply divergent mitochondrial genome of
+the Hohlenstein--Stadel femur indicates gene flow \emph{into} the
+Neanderthal branch after its separation from the modern stem
+\citep{Posth2017}. Under the DCE these published proposals describe the
+model's one external compartment: the archaic branches' uniparental
+lineages were replaced after branching and leave no trace in modern genomes
+--- no archaic mitochondrial or Y-chromosomal lineage persists in living
+humans \citep{Mendez2016,Posth2017} --- so the boundary touches no modern
+nucleotide. The scoping is not cosmetic, and its logic deserves statement.
+Under the EP class every couple-descended uniparental lineage passes
+through the couple's two maternal (or two paternal) copies, so a
+modern--archaic uniparental pair under couple descent coalesces at or
+below $T_0$ and diverges by at most $2\mu T_0$ --- yet the clock-free
+tests of Theorem~\ref{thm:scope}(ii) observe modern--archaic depths of
+$2$--$3\times$ the modern--modern value. No replacement \emph{within} the
+couple's pedigree can produce this, because every couple-descended
+replacing lineage coalesces with modern mtDNA no deeper than $T_0$; the
+replacement the tests demand is replacement \emph{from outside the
+couple's descent} --- precisely the boundary the published mechanisms
+mark. The consequence for the claim's scope is stated plainly: under the
+EP class, sole progenitorship is a claim about \emph{modern} genomes ---
+all of every living human's DNA, nuclear and uniparental --- and cannot
+be extended to the archaic clades' uniparental compartments, which are
+the model's one genuinely external component. What the boundary does
+establish, clock-free, is that the archaic clades' uniparental
+compartments were not the founding couple's: the descendant-clade reading
+is a nuclear-genome reading, and its price is stated here rather than
+hidden.
+
+Table~\ref{tab:scoping} states the scopes and their prices. The theorem is
+deliberately symmetrical in its treatment: the same tests that delimit the
+sole-progenitor claim also delimit what any origin model must explain about
+the archaic compartments. It is worth noting the symmetry's consequence for
+the debate's rhetoric: a couple model that incorporates descendant-clade
+admixture --- precisely scope S2 --- treats the deep-archaic-uniparental
+signals that scope S3 excludes as the same replacement phenomenon the
+standard model invokes for them. The $2$--$6\%$ is a shared boundary of
+both model classes, not a peculiarity of either; under the DCE, however,
+the boundary no longer removes the introgressed fraction from the claim.
+
+\begin{table}[t]
+\centering\small
+\caption{The descendant-clade extension: versions of the sole-progenitor
+claim and their evidential prices. Rate-free tests are divergence-ratio
+comparisons \citep{Green2008,Mendez2016}; tract tests are
+\citep{Sankararaman2012,Sankararaman2014,Pruefer2014}.}
+\label{tab:scoping}
+\begin{tabular}{p{4.1cm}p{5.2cm}p{5.6cm}}
+\toprule
+Scope & Content & Price \\
+\midrule
+S1: dominant progenitorship &
+Couple = sole genetic progenitors of the non-introgressed genome
+($\ge 94$--$98\%$ of nuclear DNA) + all modern mtDNA/Y &
+Unconditional within the window; introgressed fraction external
+(TMR4A, $\pi$, SFS, LD, $\Ne$-profile all satisfied) \\
+S2: descendant-clade full nuclear coverage &
+Archaic clades branch from the couple's descendants; introgressed tracts
+couple-descended; $100\%$ of modern nuclear DNA covered &
+Requires $T_0 \in [550, 595]$ kya (window's upper edge); archaic-branch
+uniparentals must be replaced \emph{from outside the couple's descent}
+(cf.\ \citep{Mendez2016,Posth2017}), so the claim covers every nucleotide
+of modern genomes, not the archaic clades' uniparental compartments \\
+S3: archaic uniparentals included &
+Archaic mtDNA/Y also couple-descended &
+Falsified clock-free by the $\sim2$--$3\times$ depth ratios \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Theoretical and empirical existence proofs}\label{sec:emp}
+The feasibility theorem asserts compatibility, not mechanism; its
+plausibility rests on the existence proofs --- theoretical results and
+observed populations showing that single-pair origins carry and generate
+large diversity. Table~\ref{tab:anchors} collects them. The theoretical
+anchors are classical: \citet{Nei1975} showed that a bottleneck of a
+single pair followed by rapid growth loses little diversity;
+\citet{BartonCharlesworth1984} that a population founded by a single
+fertilized female and doubling each generation retains over half its
+heterozygosity; \citet{SlatkinExcoffier2012} that two randomly chosen
+individuals carry on average three quarters of their population's
+heterozygosity --- the sampled-couple coefficient that the EP model
+replaces with the endowment. The empirical anchors are severe
+bottlenecks that retained diversity and adaptive capacity: the European
+ash-dieback invasion founded by two highly divergent individuals
+\citep{McMullan2018}; an island mouflon population founded by a single
+pair that retains unexpected heterozygosity \citep{Kaeuffer2007}; the
+worldwide invasion of the veined rapa whelk through a dramatic bottleneck
+\citep{Xue2018}; experimental populations passing through severe
+founder-size bottlenecks with long-term fitness consequences that do not
+prevent persistence \citep{Szucs2017}; and the vertebrate cases --- the
+Mauritius kestrel restored from a single wild pair
+\citep{Ewing2008}, the pink pigeon bottlenecked to roughly ten individuals
+and demographically recovered with documented genomic erosion
+\citep{Jackson2022}, the Chatham black robin from five
+founders \citep{vonSeth2022}, the northern elephant seal from a
+twenty-to-thirty count to hundreds of thousands
+\citep{Hoelzel2024}. In the human lineage itself, severe archaic-era
+bottlenecks have been independently inferred: an effective size near $500$
+for the Neanderthal--Denisovan ancestors \citep{Rogers2020} and a
+reduction to $\sim$1,280 breeding individuals near $930$--$813$ kya in the
+ancestry of modern humans \citep{Hu2023} --- the recognition that the
+human pedigree passes through extreme constriction is no longer exotic.
+None of the non-human cases is a human case, and none purports to
+be; their role is to certify that each quantitative step of the EP model
+--- carrying, transmission, retention, expansion, regeneration --- has
+been observed to operate at full strength in natural populations.
+
+\begin{table}[t]
+\centering\small
+\caption{Theoretical and empirical existence proofs for the quantitative
+steps of the endowed-pair model.}
+\label{tab:anchors}
+\begin{tabular}{p{3.6cm}p{4.0cm}p{7.6cm}}
+\toprule
+Anchor & Reference & Step certified \\
+\midrule
+Single-pair bottleneck theory & \citet{Nei1975} & little diversity lost under rapid growth \\
+Single-female founding theory & \citet{BartonCharlesworth1984} & $>50\%$ heterozygosity retained with doubling growth \\
+Two-individual carrying & \citet{SlatkinExcoffier2012} & $\sim75\%$ of population heterozygosity carried by two genomes \\
+Ash-dieback invasion & \citet{McMullan2018} & two divergent founders founded a continental invasion \\
+Island mouflon & \citet{Kaeuffer2007} & single-pair founding retained unexpected heterozygosity \\
+Veined rapa whelk & \citet{Xue2018} & worldwide invasion through a dramatic bottleneck \\
+Experimental bottlenecks & \citet{Szucs2017} & founder effects have long-term fitness consequences; persistence unimpeded \\
+Mauritius kestrel & \citet{Ewing2008} & single wild pair $\to$ viable population (extreme inbreeding, persistence) \\
+Pink pigeon & \citet{Jackson2022} & bottleneck to $\sim$10 $\to$ 400+; demographic recovery, genomic erosion documented \\
+Chatham black robin & \citet{vonSeth2022} & five founders; genomic erosion quantified, species persists \\
+Northern elephant seal & \citet{Hoelzel2024} & $\sim20$--$30 \to 2\times10^5$; low diversity, ecological success \\
+Archaic-era bottlenecks & \citet{Rogers2020,Hu2023} & severe bottlenecks in human ancestry independently inferred ($\Ne\approx500$; $\sim$1,280 breeding individuals) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The simulation program}\label{sec:sims}
+Every number in the paper is emitted by a single fixed-seed script,
+\texttt{sole\_progenitor\_model.py}, whose fourteen sections correspond to
+the paper's quantitative claims: endowment capacity bounds (A);
+four-allele transmission (B); the master equation engine --- exact
+hazard-weighted epoch integration for $D_{<c}$ and $\Lambda_c$ (C); the
+$540$-point feasibility grid (D); the compression identity and joint
+window (E); the uniparental clock scan (F); the site-frequency spectrum
+and Tajima's $D$ by coalescent simulation (msprime) of the de-novo
+component plus the analytic backbone, with the backbone's segregating
+fraction from forward Wright--Fisher simulation (G); the
+linkage-disequilibrium profile by haplotype recursion with
+hazard-equivalent time dilation (H); the pairwise coalescence-rate profile
+and its PSMC-style inversion (I); the balanced-locus retention and
+regeneration calculus (J); the descendant-clade scoping tests (K); the
+empirical anchors (L); the descendant-clade archaic-branch sweep (N); and
+the figures and summary outputs (M). Fixed seeds cover every
+stochastic component; the complete run executes in under three minutes on
+one core. \begin{sloppypar}Outputs: \texttt{feasibility\_grid.csv},
+\texttt{clock\_scan.csv}, \texttt{sfs\_endowed\_pair.csv},
+\texttt{ld\_decay\_endowed\_pair.csv},
+\texttt{ne\_profile\_endowed\_pair.csv},
+\texttt{hla\_regeneration.csv}, \texttt{scoping\_tests.csv},
+\texttt{empirical\_anchors.csv}, \texttt{archaic\_branch.csv},
+\texttt{feasibility\_summary.json},
+\texttt{feasibility\_report.txt}, and Figures
+\ref{fig:reqendo}--\ref{fig:branch}.\end{sloppypar}
