@@ -1,0 +1,345 @@
+\section{Introduction}\label{sec:intro}
+
+The claim under examination in this paper is the strongest version of the
+single-couple human origin (SHCO) hypothesis: that a founding couple of $N=2$
+individuals could be the \emph{sole genetic progenitors} of a human
+population --- the source of all of its heritable variation --- in the sense
+that no prior population is required to explain the diversity the population
+subsequently carries. The distinction between this claim and the weaker
+bottleneck-survival claim is the organizing theme of the paper, and it is
+worth stating at the outset in the terms in which the recent literature has
+framed it. A founding couple
+\emph{sampled} from a large pre-existing gene pool carries, on average, three
+quarters of that pool's heterozygosity \citep{SlatkinExcoffier2012}; a
+population founded by such a couple and expanded rapidly retains most of what
+they carry \citep{Nei1975,BartonCharlesworth1984}. Both statements are
+population-genetically routine. Neither, however, addresses the stronger
+question, because both take the couple's own variation as a random draw from
+an external reservoir. If the couple's genomes are instead treated as the
+\emph{initial condition} of the model --- carrying whatever divergence the
+biology of two primate genomes permits --- then the external reservoir
+disappears from the theory, and the question splits in two. The first
+question is quantitative: how much of today's diversity can be generated
+below the couple, and how much must be carried into it? Section~\ref{sec:bound}
+answers with an exact inequality --- mutation since $T_0$ can supply at most
+$2\mu T_0 \approx 53\%$ of the observed $\pi$, so an admissible couple must
+carry $h \ge \tfrac{4}{3}(\pi_{\mathrm{obs}} - 2\mu T_0) \approx 0.63\times10^{-3}$,
+some $1.9$ million SNVs per founder --- and the canonical endowment clears
+this floor comfortably. The second question is provenance, and it must be
+addressed before the model is stated, because the objection it invites is
+raised at the first equation. The canonical endowment,
+$h = 1.576\times10^{-3}$, is the coalescent-equivalent of $2\Ne$ at
+$\Ne \approx 3.3\times10^{4}$: numerically the $\Nepre$ of the
+sampled-couple class. Has the pre-bottleneck population therefore merely
+been renamed? It has not, and the reason is worth stating at the outset,
+since everything downstream depends on it. What the two classes share is a
+single scalar --- a depth reservoir that any origin must supply somewhere,
+because mutation alone accounts for at most $53\%$ of the observed
+diversity. What the sampled class adds to that scalar, and the endowed-pair
+class does not, is an \emph{entity}: a population, with drift, structure,
+and a genealogy reaching above the couple, whose presence is not one more
+parameter but a source of signatures --- pre-split allelic lineages at
+balanced loci, deep structured coalescences, deme-private variants --- that
+diversity measurements are in principle able to detect. The endowed-pair
+class contains no such entity: above the couple the model's genealogy is
+deliberately undefined, no pre-split lineage exists anywhere in it, and the
+entire content of the assumption is one bounded scalar, its admissible
+values fixed by the heterozygosities of observed primate genomes and its
+provenance deliberately left open. Three readings of that scalar are live
+--- sampled from a pre-population, constituted de novo, assembled from
+diverged ancestral lineages --- and all three produce identical descendant
+genetics (Section~\ref{sec:nature}), which is precisely why no diversity
+measurement can adjudicate among them and why a theory that claims to is
+importing an assumption, not deriving a result. What the model establishes
+is underdetermination under exact bounds: the historical diversity
+objection, which purported to read the couple's impossibility off the data,
+follows from no diversity measurement.
+
+The distinction is not academic. It maps onto the modern debate over whether
+genomic data constrain the existence of a single founding couple --- a debate
+carried across population genetics, philosophy of science, and the
+theological literature \citep{Gauger2012,Swamidass2019,HossjerGauger2019}.
+The standard objection --- that humans
+are far too diverse to descend from a single pair --- has two halves: a
+\emph{level} claim (a bottleneck to $N=2$ would leave the species nearly
+homozygous) and a \emph{structure} claim (the allele-frequency spectrum, the
+coalescence-time distribution, and the allelic richness of balanced loci
+would betray such an origin). The level claim fails on the classical results:
+a one-generation bottleneck at $N=2$ costs exactly one quarter of the
+carried heterozygosity, and rapid expansion preserves the remainder
+\citep{Nei1975,SlatkinExcoffier2012}. To this the paper adds the decisive
+combinatorial point: because the overwhelming majority of human SNPs are
+biallelic, four gene copies can carry \emph{every} allelic state at every
+biallelic locus simultaneously, so the carrying capacity of two genomes is
+not the binding constraint. The structure claims are the
+substantive ones, and they have never been jointly tested against a
+sole-progenitor model: the sampled-couple class tested against them
+turns out to be a carrier model by construction --- it assumes the
+pre-bottleneck population whose existence the sole-progenitor claim denies.
+The present paper closes that gap.
+
+The strategy is to work entirely within secular
+population genetics, state every constraint as an exact identity or a
+published empirical estimate, and map the parameter region in which all
+constraints hold simultaneously. Nothing in the argument requires
+nonstandard genetics: every rate is pedigree-measured, every correction is
+a published reconciliation, every bound is an observed genome, and the
+model's one free parameter is fixed within narrow margins by the
+heterozygosities of genomes that exist. The
+\emph{endowed-pair (EP) model} introduced here has no pre-bottleneck
+population at all. Its founder genomes enter with an endowment $h$ --- the
+per-site divergence among their four gene copies --- bounded above not by a
+population history but by the heterozygosity that natural primate genomes
+are observed to carry: $3.1$--$4.1$ million SNVs in humans
+\citep{PradoMartinez2013,Auton2015}, $5.7$ million in the chimpanzee
+\citep{PradoMartinez2013}. The endowment is worth $h/(2\mu)$ generations of
+coalescent-equivalent depth --- $1.64$ Myr at the canonical value, $1.98$ Myr
+for chimp-scale founders --- which is precisely the depth that the
+sampled-couple model imported from its $\Nepre$. The master result (Section~\ref{sec:endo})
+is that the pairwise-diversity identity $\pi = 2\mu E[T_2]$ is satisfied at
+the observed value $\pi \approx 10^{-3}$ by a region of parameter space
+whose bottleneck time coincides with the window that the independent
+autosomal arguments of Swamidass already singled out: $T_0 \approx 400$
+to $600$ kya, with the compression time of four lineages --- the quantity
+Swamidass named TMR4A and estimated at $495 \pm 100$ kya
+\citep{Swamidass2019,Swamidass2022} --- equal to $T_0$ identically.
+
+Three further results complete the feasibility map. First, the
+site-frequency spectrum, Tajima's $D$, and the linkage-disequilibrium decay
+of the EP model are computed by forward simulation and coalescent
+simulation; the model reproduces the strongly negative $D$ of expanding
+human populations and the observed short-range $r^2$ profile
+(Section~\ref{sec:sfsld}). Second, the extreme bottleneck is invisible to
+PSMC- and MSMC-type reconstruction at its temporal resolution
+(Section~\ref{sec:ne}), a conclusion that follows from the resolution limits
+of the reconstruction methods \citep{LiDurbin2011} and is confirmed by the
+present simulations. Third, the
+polymorphism objection at balanced loci is answered with a retention and
+regeneration calculus, supplemented by the
+convergent-evolution and bottleneck-duration corrections that the MHC
+literature itself supplies against the classical HLA argument of
+\citet{Ayala1995}
+(Section~\ref{sec:poly}). Fourth, the introgressed archaic fraction of
+modern genomes --- some $2$--$6\%$ of non-African DNA --- is handled by the
+descendant-clade extension (Section~\ref{sec:scope}): the Neanderthal and
+Denisovan lineages are modeled as descendant branches of the founding
+couple's descendant population, so that archaic admixture is gene flow
+\emph{within} the couple's pedigree and the introgressed tracts are
+couple-descended DNA returning to the modern branch.
+
+The paper is equally explicit about what the model does \emph{not} settle.
+Under sole progenitorship the mitochondrial-DNA and Y-chromosomal most
+recent common ancestors are the founding couple themselves, so their true
+dates equal $T_0$ identically; their published date estimates, however, are
+anchored on the human--chimpanzee split, a clock that \citet{Scally2012}
+showed requires an ancestral mutation rate roughly twice the directly
+measured trio rate. Section~\ref{sec:uni} quantifies the correction and
+identifies it as the model's principal conditional layer. And the
+introgressed archaic fraction of modern genomes is subject to the
+descendant-clade extension and its scoping corollary
+(Section~\ref{sec:scope}), whose clock-free tests delimit exactly which
+versions of the sole-progenitor claim the genetic data leave open. The
+claim defended here is a possibility theorem: the diversity and structure of
+the human genome do not falsify a sole-progenitor couple at
+$T_0 \in [400, 600]$ kya --- and the theorem is the more falsifiable of
+the two positions on the question, because Section~\ref{sec:theorem}
+states seven measurable conditions under which it collapses, while the
+counter-position, that the couple must have been sampled from a
+pre-existing population, rests on an assumption that the
+identical-observables result places beyond the reach of any diversity
+measurement (Section~\ref{sec:nature}). Whether the claim's metaphysical
+provenance is creation, sampling, or assembly from diverged lineages is
+not a question the mathematics can decide, and the paper does not pretend
+otherwise; what the mathematics does decide is that no measurement of
+diversity adjudicates it --- which is why the historical objection, posed
+as a claim about the data, never followed from the data.
+
+The plan of the paper is as follows. Section~\ref{sec:framework} fixes
+notation and the coalescent background. Section~\ref{sec:classes} defines
+the two model classes and the endowment parameter with its biological
+bounds. Section~\ref{sec:endo} derives the master equation of the EP model,
+prices the generation bound the endowment must meet, and maps its
+feasibility region. Section~\ref{sec:uni} treats the
+uniparental clocks; Section~\ref{sec:sfsld} the frequency spectrum,
+Tajima's $D$, linkage disequilibrium, and coalescence-depth distribution;
+Section~\ref{sec:ne} the detectability of the bottleneck;
+Section~\ref{sec:poly} the balanced-locus objection;
+Section~\ref{sec:scope} the descendant-clade extension of the archaic
+fraction and its scoping corollary; Section~\ref{sec:emp} the
+theoretical and empirical existence proofs. Section~\ref{sec:theorem}
+assembles the feasibility theorem and its falsification conditions,
+Section~\ref{sec:objections} answers the objection catalogue in turn, and
+Sections~\ref{sec:nature}--\ref{sec:conclusion} discuss the proof's nature,
+scope, and conclusions. All quantitative statements are emitted by a single
+fixed-seed script (Section~\ref{sec:sims} and the reproduction appendix).
+
+\section{Mathematical framework}\label{sec:framework}
+
+\subsection{The Wright--Fisher process and the coalescent}
+The backward genealogy of the Wright--Fisher process \citep{Wright1931}
+of a sample from a Wright--Fisher population of changing diploid size
+$N(t)$ is governed by the pairwise coalescence hazard
+\begin{equation}\label{eq:hazard}
+\Lambda(t) \;=\; \int_0^{t} \frac{\mathrm{d}s}{2\,N(s)} ,
+\end{equation}
+the probability that a pair of gene copies survives un-coalesced from the
+present to backward time $t$ being $e^{-\Lambda(t)}$
+\citep{Hudson1990,CrowKimura1970}. The identity that governs the diversity
+analysis is the infinite-sites relation
+\begin{equation}\label{eq:piconstraint}
+\pi \;=\; 2\mu\,E[T_2],
+\end{equation}
+exact for neutral mutations on any genealogy and under any demography
+\citep{Hudson1990}. With the observed genome-wide nucleotide diversity
+$\pi_{\mathrm{obs}} \approx 10^{-3}$ per site \citep{Auton2015} and the
+directly measured per-generation mutation rate
+$\mu = 1.2\times10^{-8}$ \citep{Kong2012,Scally2012,Jonsson2017}, the
+requirement is
+\begin{equation}\label{eq:T2req}
+E[T_2] \;=\; \frac{\pi_{\mathrm{obs}}}{2\mu} \;\approx\; 4.17\times10^{4}\ \text{generations}
+\;\approx\; 1.04\ \text{Myr}
+\end{equation}
+at 25 years per generation \citep{Fenner2005,Scally2012}. Equation~\eqref{eq:T2req} is the master
+constraint of the paper; what
+changes between model classes is the mechanism by which an $N=2$ origin meets it.
+
+Two clock classes must be distinguished from the outset, because the
+feasibility argument of Section~\ref{sec:uni} depends on the distinction.
+\emph{Direct} clocks are calibrated on pedigrees: the autosomal trio rate
+$\mu = 1.0$--$1.3\times10^{-8}$ \citep{Scally2012,Jonsson2017}, the
+recombination map, and every autosomal coalescence quantity derived from
+them. \emph{Anchored} clocks are calibrated on the human--chimpanzee
+divergence: the mtDNA and Y-chromosomal rates and their coalescence-date
+estimates. The two classes disagree systematically in the literature
+precisely because the anchored clocks embed an ancestral rate roughly twice
+the direct one \citep{Scally2012}; Section~\ref{sec:uni} makes this
+quantitative. Autosomal quantities ($\pi$, $E[T_2]$, TMR4A, LD) are read on
+the direct clock throughout.
+
+\subsection{Summary statistics}
+Heterozygosity per site $H$, nucleotide diversity $\pi$, Watterson's
+$\theta_W = S_n/a_n$ with $a_n = \sum_{i=1}^{n-1} 1/i$
+\citep{Watterson1975}, Tajima's $D$ \citep{Tajima1989}, and the linkage
+disequilibrium coefficient $r^2$ \citep{HillWeir1988} are used with their
+standard definitions and simulation-based expectations. Tajima's $D$ for the
+human series is strongly negative
+($D \approx -2$ in large-sample series \citep{Tennessen2012}), the
+signature of recent expansion; the EP model is required to reproduce its
+sign and order of magnitude (Section~\ref{sec:sfsld}).
+
+\subsection{Notation}
+Table~\ref{tab:notation} summarizes notation; one generation is 25 years
+\citep{Fenner2005,Scally2012}. All times are generations unless marked ``kya''.
+
+\begin{table}[t]
+\centering\small
+\caption{Notation used throughout.}
+\label{tab:notation}
+\begin{tabular}{ll}
+\toprule
+Symbol & Meaning \\
+\midrule
+$N(t)$, $\Ne^{\max}$ & diploid effective size at backward time $t$; post-expansion plateau \\
+$T_0$ & time of the founding couple (generations before present) \\
+$\gamma$ & per-generation growth factor of the early expansion \\
+$h$ & endowment: per-site divergence among the couple's four gene copies \\
+$\Lambda_c$ & hazard accumulated from present to the couple generation, Eq.~\eqref{eq:hazard} \\
+$D_{<c}$ & expected coalescence depth contributed by pairs coalescing before the couple \\
+$\mu$, $c$ & per-site per-generation mutation ($1.2\times10^{-8}$) and recombination ($10^{-8}$) rates \\
+$H$, $\pi$ & heterozygosity per site; nucleotide diversity \\
+$T_2$, $\mathrm{TMR4A}$ & pairwise coalescence time; four-lineage genome compression time \\
+$F$ & inbreeding coefficient \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The two model classes}\label{sec:classes}
+
+\subsection{Sampled-couple trajectories}
+The \emph{sampled-couple trajectory} $B(T_0, \Nepre)$ is the baseline model
+class against which the sole-progenitor question is usually posed: a
+demographic function with $N(T_0) = 2$, the
+founding pair being a random sample of four gene copies from a pre-existing
+population of effective size $\Nepre$. The pass-through structure of that
+model imports the pre-population's depth: pairs that survive the expansion
+coalesce, on average, in a gene pool of size $\Nepre$, giving
+\begin{equation}\label{eq:sampled}
+E[T_2] \;=\; D_{<c} \;+\; e^{-\Lambda_c}\Big[T_0 + \tfrac{3}{4}\,(2\Nepre)\Big],
+\end{equation}
+so that observed diversity forces $\Nepre \gtrsim 2$--$3\times10^4$. This
+is the quantitatively correct statement of the ``carrier'' result: in the
+sampled-couple class, the couple is a bottleneck transmitter, and the
+pre-bottleneck population is a mandatory input. A feasibility region for
+that class follows from the same hazard machinery developed in
+Section~\ref{sec:endo}; the present paper does not re-derive it, because the
+class is by construction a carrier model --- and it is precisely the
+carrier assumption that sole progenitorship denies.
+
+\subsection{Endowed-pair trajectories}
+The \emph{endowed-pair (EP) trajectory} $E(T_0, \gamma, \Ne^{\max}, h)$
+removes the pre-bottleneck population. Its demographic function has
+$N(T_0) = 2$ --- the founding couple carrying four gene copies per locus ---
+and no population before the couple: the couple is the model's first
+generation, expanding forward at factor $\gamma$ per generation to a
+plateau $\Ne^{\max}$, with the recent-growth epoch of the last two
+millennia appended. What replaces $\Nepre$ is an
+initial condition on the couple's genomes:
+
+\begin{definition}[Endowment]\label{def:endowment}
+The \emph{endowment} of a founding couple is the per-site divergence $h$
+among its four gene copies at time $T_0$: the fraction of sites at which
+the couple's homologous copies differ. The corresponding pool heterozygosity
+--- the expected heterozygosity of two gene copies drawn at random from the
+couple's four --- is $H_{\mathrm{pool}} = \tfrac{3}{4}h$ for founders with
+disjoint SNV sets and comparable heterozygosity (Section~\ref{sec:endocap}).
+\end{definition}
+
+Three remarks fix the interpretation. First, the endowment is a free
+parameter of the model class, not a derived quantity: under the
+sole-progenitor reading there is no ancestral pool from which to sample it.
+Second, the parameter is bounded \emph{biologically}, not historically: two
+primate genomes cannot carry more divergence than natural primate genomes
+in fact carry (Section~\ref{sec:endocap}). Third, the model's genealogy
+above the couple is deliberately undefined --- cross-founder lineages have
+no common ancestor within the model, and their divergence is the endowment
+itself. This is the formal expression of sole progenitorship: nothing
+before the couple enters the calculation.
+
+The EP model is the mathematical skeleton of the scenario in which a
+bottleneck of two lies beyond half a million years ago, and
+it is the model class in which the couple is a \emph{source} rather than a
+carrier. The two classes are complementary, not competing: both are
+consistent with the same data (Sections~\ref{sec:endo}--\ref{sec:sfsld}),
+and they differ in where the diversity enters --- externally through
+$\Nepre$, or internally through $h$. Which class describes actual history
+is not decidable by the diversity data alone; the difference is one
+hierarchical level of ancestry (Section~\ref{sec:nature}).
+
+\subsection{Biological bounds on the endowment}\label{sec:endocap}
+The endowment's admissible range is fixed by the heterozygosity that
+natural primate genomes carry. The average modern human genome carries
+about $3.1$--$4.1$ million single-nucleotide variants
+\citep{PradoMartinez2013,Auton2015}; the chimpanzee, at comparable genome
+size, carries about $5.7$ million \citep{PradoMartinez2013}. Converting to
+per-site divergences at $L = 3\times10^{9}$ sites:
+\begin{equation}\label{eq:hbounds}
+h_{\mathrm{human}} = 1.36\times10^{-3}, \qquad
+h_{\mathrm{chimp}} = 1.90\times10^{-3},
+\end{equation}
+with the corresponding pool heterozygosities $0.75h$ of
+$1.02\times10^{-3}$ and $1.43\times10^{-3}$. Two founders whose variant
+sets are largely disjoint and whose heterozygosities lie anywhere in the
+observed primate range therefore endow the model with a pool heterozygosity
+of order $10^{-3}$ --- the entire diversity budget that
+Eq.~\eqref{eq:T2req} demands. The carrying-capacity objection dissolves at
+this step: the couple need not carry ``all'' of today's $10^8$-scale SNP
+catalog, because the rare-variant tail of that catalog is generated by
+post-bottleneck mutation (Section~\ref{sec:sfsld}); what the couple must
+carry is the \emph{divergence budget} of the common-variant backbone, and
+that budget is of the same order as two ordinary primate genomes.
+
+The combinatorial version of the same point is elementary:
+at a biallelic locus the couple's four gene copies can carry every allelic
+state that exists, and sexual reproduction reassorts them independently;
+the four-allele endowment is therefore representable in full. The
+transmission mechanics are quantified in Section~\ref{sec:trans}.
